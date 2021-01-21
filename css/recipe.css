@@ -1,0 +1,149 @@
+
+/* banner */
+div.banner{
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 600px;
+    background-image: url(../img/recipebanner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.banner h2.pagename{
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 3px;
+    display: block;
+    text-shadow:black 1px 1px 4px;
+    background-color: rgba(239, 237, 225,0.3);
+    padding: 20px;
+    font-family: "Arial";
+}
+
+/* 左內容 */
+
+div.main{
+    margin: 20px auto;
+    display: flex;
+    width: 1200px;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* text-align: center; */
+}
+div.left{
+    background-color: #cdbb8c;
+    width: 200px;
+    border-radius: 10px; 
+}
+
+div.left img{
+    width: 20px;
+    height: 20px;
+}
+
+div.left h3{
+    padding: 5px 0px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ab8d3f;
+    border-bottom: 3px solid #efede1;
+    width: 80%;
+    margin: 10px;
+    font-family: "Arial";
+}
+
+div.left li{
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: "Arial";
+    padding: 5px;
+    padding-left: 30px;
+    color: #2c104c;
+}
+
+/* 右內容 */
+div.right{
+    /* background-color: yellow; */
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+div.pdct_card{
+    background-color: #cdbb8c;
+    width: 300px;
+    border-radius: 10px; 
+    /* padding: 10px; */
+    height: 340px;
+    overflow: hidden;
+    margin: 30px 0px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+div.right h4{
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #2c104c;
+    /* margin: 10px; */
+    font-family: "Arial";
+}
+
+div.right p{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #2c104c;
+    /* margin: 10px; */
+    font-family: "Arial";
+}
+
+/* 頁數 */
+div.page{
+    display: flex;
+    margin: auto;
+    margin-bottom: 80px;
+}
+  div.page > ul.pagination{
+    margin: auto;
+    font-size: 0;
+  }
+  div.page > ul.pagination > li{
+    display: inline-block;
+    font-family: "Arial";
+  }
+  div.page > ul.pagination > li > a{
+    display: inline-block;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 1rem;
+    color: #2c104c;
+  }
+  
+  
+  div.page > ul.pagination > li > a.-on{
+    background-color: #ab8d3f;
+    font-weight: bold;
+    color: #2c104c;
+    border-radius: 50%; 
+  }
+  
+  div.page > ul.pagination > li > a:hover{
+    background-color: #ab8d3f;
+    font-weight: bold;
+    color: #2c104c;
+    border-radius: 50%; 
+  }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOCO Cocktail Lab.</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+    <link href="./css/index.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header_inner">
+            <div class="logo">
+                <a class="logo" href="index.html">
+                <img src="./img/logo.png" width="140px" alt="">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li><a href="about.html">關於MOCO</a></li>
+                    <li><a href="course.html">調酒課程</a></li>
+                    <li><a href="recipe.html">酒譜專區</a></li>
+                    <li><a href="classroom.html">教室資訊</a></li>
+                </ul>
+            </nav>
+            <div class="icon">
+                <div><img class="iconimg" id="search" src="./img/search.png" width="30px" alt="search"></div>
+                <div><img class="iconimg" id="cart" src="./img/cart.png" width="30px" alt="cart"></div>
+                <div><img class="iconimg" id="user" src="./img/user.png" width="30px" alt="user"></div>
+            </div>
+    </header>
+    <div class="main_top">
+        <div class="single-item">
+          <div class="img_p1"><a href="about.html"><p class="img_p1">「用酒來珍藏與親友的快樂時光，這才是生活。」</p><img src="./img/bannerimg01.jpg"></a></div>
+          <div class="img_p2"><a href="recipe.html"><p class="img_p2">成為朋友間的調酒師，創造美好的聚會時光。</p><img src="./img/bannerimg02.jpg"></a></div>
+          <div class="img_p3"><a href="course.html"><p class="img_p3">讓我們帶著你用你喜歡的酒和配料，盡情發揮你的創作能量。</p><img src="./img/bannerimg03.jpg"></a></div>
+        </div>
+    </div>
+    <div class="main_bottom">
+        <div class="course">
+            <div class="title">
+                <h2>調酒課程</h2>
+                <p>從入門到大師</p>
+            </div>
+            <div class="course_inner">
+                <div class="course1"><a href="course.html"><img src="./img/course01.jpg"><p>初階課程</p></a></div>
+                <div class="course2"><a href="course.html"><img src="./img/course02.jpg"><p>進階課程</p></a></div>
+                <div class="course3"><a href="course.html"><img src="./img/course03.jpg"><p>專業課程</p></a></div>
+            </div>
+        </div>
+
+        <div class="recipe">
+            <div class="title">
+                <h2>酒譜專區</h2>
+                <p>從杯子到螺絲起子</p>
+            </div>
+            <div class="recipe_inner">
+                <div class="img"><img src="./img/recipe01.jpg" alt=""></div>
+                <div class="bottom"> 
+                    <div class="article">
+                        <h3>莓牛奶  Strawberry Milk</h3>
+                        <p class="title2">材料比例：</p>
+                        白蘭地 …… 10 ml<br>	
+                        草莓香甜酒 …… 35 ml<br>	 
+                        白巧克力香甜酒 …… 25 ml<br> 
+                        鮮奶 …… 看你心情
+                        <p class="title2">作法：</p>
+                        雪克杯加入所有材料及冰塊，搖盪均勻。<br>
+                        濾掉冰塊，將酒液倒入白蘭地杯。
+                        <p class="title2">建議裝飾物：</p>
+                        新鮮草莓／草莓乾
+                        <div class="button"><a href="recipe.html"><span>更多酒譜</span></a></div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="classroom">
+            <div class="title">
+                <h2>教室資訊</h2>      
+            </div>
+            <div class="classroom_inner">
+                <img src="./img/classroom01.png">
+                <p>我們有三間教室，可挑選您附近的教室上課。</p>
+                <div class="button"><a href="classroom.html"><span>教室資訊</span></a></div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <a class="messenger" href="https://m.me/MOCO" target="_blank"><img src="./img/messenger.png"/></a>
+    <div class="warning">酒後不開車 安全有保障</div>
+    <footer>
+        <div class="main_footer">
+            <ul class="footer">
+                <li>諮詢電話 | 03-3211234</li>
+                <li>客服信箱  | info@moco.com</li>
+                <li>營業時間  | 10:00-22:00</li>
+            </ul>
+        </div>
+    
+        </div>
+        <div class="copyright">
+            <P>  © 2021 MOCO Cocktail Lab. | All Rights Reserved. </P> 
+            </div>
+    </footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script type="text/javascript">
+       $('.single-item').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+      });
+
+
+    </script>
+</body>
+</html>

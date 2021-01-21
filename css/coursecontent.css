@@ -1,0 +1,367 @@
+/* banner */
+div.banner{
+    margin: 0 auto;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    height: 600px;
+    background-image: url(../img/coursecontentbanner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.banner h2.pagename{
+    width: 40%;
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+    letter-spacing: 2px;
+    display: block;
+    text-shadow:black 1px 1px 4px;
+    background-color: rgba(239, 237, 225,0.3);
+    padding: 20px;
+    font-family: "Arial";
+}
+
+/* 主內容 */
+div.main{
+    width: 1200px;
+    margin: auto;
+}
+
+div.left{
+    /* background-color: teal; */
+    width: 800px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.other img{
+    width: 15px;
+}
+
+div.heart{
+    cursor: pointer;
+}
+
+div.other{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+div.other p{
+    align-items: center;
+    text-align: center;
+    color: #2c104c;
+    font-family: "Arial";
+}
+
+h2{
+    margin: 10px 20px 10px 5px;
+    width: 210px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #2c104c;
+    font-family: "Arial";
+}
+
+div.other span{
+    align-items: center;
+    text-align: center; 
+    font-size: 16px;
+    color: #2c104c;
+    /* display: block; */
+    font-family: "Arial";
+}
+
+span.title{
+    display: inline-block;
+    margin: 10px 0px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ab8d3f;
+}
+
+span.title1{
+    display: inline-block;
+    margin: 10px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #2c104c;
+}
+
+p.text{
+    width: 100%;
+    font-size: 16px;
+    line-height: 26px;
+    color: #2c104c;
+    font-family: "Arial";
+    padding: 5px 0;
+}
+
+div.bottom{
+    background-color: rgba(205,187,140,0.5);
+    padding: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2c104c;
+}
+
+div.bottom div.text{
+    background-color: #efede1;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #2c104c;
+    vertical-align: center;
+}
+
+div.bottom div.text span.price{
+    padding-left: 250px;
+    padding-right: 80px;
+}
+
+
+div.part{
+    width: 80%;
+    border-bottom: 3px solid #cdbb8c;
+}
+
+div.right{
+    position: sticky;
+    top: 100px;
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+    border: 3px solid rgba(205,187,140,0.5);
+    padding: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2c104c;
+}
+
+div.right div.text{
+    margin-bottom: 15px;
+}
+
+div.right div.text p{
+    display: inline-block;
+    padding: 5px;
+    font-size: 16px;
+    color: #2c104c;
+    vertical-align: bottom;
+    font-family: "Arial";
+}
+
+div.option option,div.option select{
+    font-size: 16px;
+    border-radius: 5px;
+    width: 140px;
+}
+
+div.Q{
+    padding-top: 10px;
+}
+
+button.add {
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color:  #ab8d3f;
+    color: white;
+    box-shadow: 1px 1px 2px lightslategray;
+    cursor: pointer;
+    border-radius: 50%;
+  
+  }
+
+div.text div{
+      display: inline-block;
+      font-weight: bold;
+}
+
+div.text span{
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c104c;
+    font-family: "Arial";  
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+div.text span.number{
+    /* display: inline-block; */
+    margin: 10px 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #2c104c;
+    font-family: "Arial";
+}
+
+div.bottom div.button{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  div.bottom div.button span.cart{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ab8d3f;
+    display: inline-flex;
+    border-radius: 20px;
+    border: 2px solid #ab8d3f;
+    padding: 8px 12px;
+    text-align: center;
+    text-shadow: #cdbb8c 0px 0px 10px;
+    /* font-weight: bold; */
+  }
+
+span.cart a{
+    color: #ab8d3f;
+}
+
+span.buy, .date{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: white;
+    display: inline-flex;
+    border-radius: 20px;
+    background-color: #ab8d3f;
+    padding: 10px 15px;
+    text-align: center;
+    text-shadow: white 0px 0px 10px;
+    /* font-weight: bold; */
+}
+
+span.buy a, span.date a{
+    color: white;
+}
+
+div.sort span.sort{
+    font-size: 12px;
+    color: #2c104c;
+    padding-top: 5px;
+}
+
+div.sort{
+    display: flex;
+    justify-content: flex-end;
+}
+
+div.sort option,div.sort select{
+    font-size: 12px;
+    border-radius: 5px;
+    width: 110px;
+    height: 20px;
+    color: #2c104c;
+}
+
+div.comment{
+    /* background-color: aqua; */
+    width: 100%;
+}
+div.comment div.img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+div.comment div.text{
+    width: 460px;
+    margin: 10px;
+    border-bottom: 3px dotted #ab8d3f ;
+    display: inline-block;
+}
+
+div.comment div.text h4{
+    font-size: 16px;
+    padding: 5px 0px;
+    font-weight: bold;
+    color: #2c104c;
+    font-family: "Arial";
+}
+
+div.comment div.text p{
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px 0px;
+    color: #2c104c;
+    font-family: "Arial";
+}
+
+span.fivestar img{
+    width: 13px;
+    margin-right: 2px;
+}
+
+div.smallimg img{
+    margin-right: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+div.right img{
+    width: 20px;
+}
+
+
+/* 頁數 */
+div.page{
+    display: flex;
+    margin: auto;
+    margin-bottom: 80px;
+}
+  div.page > ul.pagination{
+    margin: auto;
+    font-size: 0;
+  }
+  div.page > ul.pagination > li{
+    display: inline-block;
+    font-family: "Arial";
+  }
+  div.page > ul.pagination > li > a{
+    display: inline-block;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 1rem;
+    color: #2c104c;
+  }
+  
+  
+  div.page > ul.pagination > li > a.-on{
+    background-color: #ab8d3f;
+    font-weight: bold;
+    color: #2c104c;
+    border-radius: 50%; 
+  }
+  
+  div.page > ul.pagination > li > a:hover{
+    background-color: #ab8d3f;
+    font-weight: bold;
+    color: #2c104c;
+    border-radius: 50%; 
+  }

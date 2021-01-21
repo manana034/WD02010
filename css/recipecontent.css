@@ -1,0 +1,149 @@
+div.main_top {
+    /* background-color: thistle; */
+    width: 1200px;
+    height: 570px;
+    margin: auto;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+div.left {
+    /* background-color: yellow; */
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin: auto;
+    margin: 20px;
+    text-align: center;
+}
+
+div.right {
+    /* background-color: tomato; */
+    width: 600px;
+    margin: 20px;
+    display: inline-block;
+}
+
+div.right h2 {
+    font-size: 24px;
+    padding-top: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #2c104c;
+    font-family: "Arial";
+}
+
+p.text {
+    font-size: 16px;
+    color: #2c104c;
+    padding-left: 0px;
+    padding-bottom: 10px;
+}
+
+p.type {
+    font-size: 12px;
+    /* background-color: #ab8d3f; */
+    color:  #ab8d3f;
+    display: inline-block;
+    padding: 5px;
+    margin: 10px 5px;
+    border-radius: 30px;
+    border: 2px solid #ab8d3f;
+    font-family: "Arial";
+}
+
+div.intro1,div.intro2,div.intro3 {
+    background-color: #cdbb8c;
+    cursor: pointer;
+    margin: 10px;
+    width: 450px;
+    border-radius: 10px;
+}
+
+div.intro h3{
+    padding: 5px 0px;
+    letter-spacing: 1px;
+    color: #2c104c;
+    font-size: 18px;
+    padding: 10px;
+    position: relative;
+}
+
+div.intro span {
+    display: inline-block;
+    border: solid #2c104c;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 3px;
+    height: 3px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 30px;
+    top: 25%;
+}
+
+div.intro1>div,div.intro2>div,div.intro3>div {
+    font-size: 16px;
+    color: #2c104c;
+    font-family: "Arial";
+    line-height: 26px;   
+    padding: 5px 20px;
+    display: none;
+    width: 80%;
+    border-top: 2px dotted #efede1;
+}
+
+
+
+div.main_bottom{
+    width: 960px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+div.h3{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ab8d3f;
+    border-bottom: 3px solid #efede1;
+    width: 100px;
+    padding: 5px;
+
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+div.course_card{
+    background-color: #cdbb8c;
+    width: 260px;
+    border-radius: 10px; 
+    /* padding: 10px; */
+    height: 240px;
+    overflow: hidden;
+    margin: 30px 0px;
+    box-shadow: 5px 5px 10px gray;
+    position: relative;
+
+}
+
+div.course_text{
+    position: absolute;
+    left:0px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(239, 237, 225,0.8);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #2c104c;
+    /* margin: 10px; */
+    font-family: "Arial";
+}
