@@ -52,10 +52,7 @@ header {
     /* background-color: yellow; */
     margin: 0px 10px;
     display: flex;
-    /* 大螢幕 */
     justify-content: space-between;
-    /* 漢堡出來時767以下 */
-    /* justify-content: flex-end; */
   }
   .hamburger{
     width: 15px;
