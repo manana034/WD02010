@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOCO Cocktail Lab.</title>
     <link href="./css/reset.css" rel="stylesheet">
-    <link href="./css/common.css" rel="stylesheet">    
-    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
     <link href="./css/coursecontent.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header_inner">
             <div class="logo">
                 <a class="logo" href="index.html">
-                <img src="./img/logo.png" width="140px" alt="">
+                <img src="./img/logo.png" alt="">
                 </a>
             </div>
             <nav>
@@ -27,9 +28,8 @@
                 </ul>
             </nav>
             <div class="icon">
-                <div><img class="iconimg" id="search" src="./img/search.png" width="30px" alt="search"></div>
-                <div><img class="iconimg" id="cart" src="./img/cart.png" width="30px" alt="cart"></div>
-                <div><img class="iconimg" id="user" src="./img/user.png" width="30px" alt="user"></div>
+                <div class="cart"></div>
+                <div class="user"></div>
             </div>
     </header>
     <div class="banner">
@@ -37,19 +37,18 @@
     </div>
     <div class="main">
         <h2>少女系超簡派調酒</h2>
-        <div class="other">
-            <div class="star">
-                <img src="./img/star.png">
-                <span class="star">4.9</span>
-            </div>
-            <p class="person">30+ 人參加過</p>
-            <div class="heart">
-                <img src="./img/heart.png">
-                <span class="price">加入願望清單</span>
-            </div>
-        </div>
-
         <div class="left">
+            <div class="other">
+                <div class="star">
+                    <img src="./img/star.png">
+                    <span class="star">4.9</span>
+                </div>
+                <p class="person">30+ 人參加過</p>
+                <div class="heart">
+                    <img src="./img/heart.png">
+                    <span class="price">加入願望清單</span>
+                </div>
+            </div>
             <div class="part">
                 <span class="title">▌</span><span class="title1">課程內容</span>
                 <p class="text">我們精選三杯經學員認證口味最受歡迎的調酒<br>調製簡單、酒精濃度低，有喝酒的感覺、沒有喝醉的風險<br>我們總共有兩代少女系的課程<br>
@@ -57,11 +56,12 @@
                     <a name="selectdate"></a>(酒後不開車，安全有保障。未滿十八歲，禁止飲酒。)<br><br>電子憑證將寄送至Email信箱，請於現場出示電子憑證與護照或身份證。</p>
             </div>
             <div class="part">
+                <form action="#" method="#">
                 <span class="title">▌</span><span class="title1">選擇日期</span>
                 <div class="bottom">
                     <div class="Q">選擇分店</div>
                     <div class="option">
-                      <select>
+                      <select class="each">
                         <option selected disabled>請選擇</option>
                         <option>台北店</option>
                         <option disabled>台中店</option>
@@ -70,34 +70,52 @@
                     </div>
                     <div class="Q">請選擇日期</div>
                     <div class="option">
-                      <select>
-                        <option disabled>待補</option>
-                      </select>
+                        <div id="datepicker" class="input-group date" data-date-format="yyyy-mm-dd">
+                            <input class="form-control each" type="text" readonly/>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>                        
+                        </div>
                     </div>              
                     <div class="Q">請選擇時間</div>      
                     <div class="option">
-                        <select>
+                        <select class="each">
                           <option selected disabled>請選擇</option>
                           <option>上午10:00</option>
                           <option>下午2:00</option>
                           <option>晚上7:00</option>
                         </select>
                     </div>
-                    <div class="Q">人數</div>
-                    <div class="text">
+                    <div class="text first">
                         <span>每人</span>
-                        <span class="price">NT $980</span>
+                        <span class="price">NT $1080</span>
                         <div calss="number">
                             <button class="min add">-</button>
-                            <span class="number">1</span>
+                            <input type="text" value="1" id="count" min="0" max="6">
                             <button class="max add">+</button>
                         </div>
                     </div>
+                    <div class="text">
+                        <span>明細</span>
+                        <span>每位1080元 * <span id="num">1</span>位</span>
+                        <span><p id="sub">NT $1080</p></span>
+                    </div>
+                    <div class="text">
+                        <div>
+                            <span>優惠代碼</span>
+                            <input type="text" id="coupon">
+                            <button id="checkCoupon">使用</button>
+                        </div>
+                        <span id="sale"></span>
+                    </div>
+                    <div class="text last">
+                        <span>總價<span id="total">NT $1080</span></span>
+                    </div>
+
                     <div class="button">
-                        <span class="cart"><a href="#">加入購物車</a></span>
-                        <span class="buy"><a href="#">立刻預定</a></span>
+                        <button class="cart">加入購物車</button>
+                        <button class="buy">立刻預定</button>
                     </div>
                 </div>
+                </form>
             </div>
             <div class="part">
                 <span class="title">▌</span><span class="title1">取消與更改</span>
@@ -118,44 +136,44 @@
                         <div class="img">
                             <img src="./img/comment01.jpg">
                         </div>
-                        <div class="text">
+                        <div class="name">
                             <h4>Anna Wang</h4>
                             <span class="fivestar"><img src="./img/star.png"><img src="./img/star.png"><img src="./img/star.png"><img src="./img/star.png"><img src="./img/star.png"></span.class></span>
                             <p>活動環境明亮又舒適，講師解說及示範也非常專業！</p>
-                            <div class="smallimg">
-                                <img src="./img/recipe001.jpg">
-                                <img src="./img/recipe003.jpg">
-                                <img src="./img/about02.jpg">
-                            </div>
+                        </div>
+                        <div class="smallimg">
+                            <img src="./img/recipe001.jpg">
+                            <img src="./img/recipe003.jpg">
+                            <img src="./img/about02.jpg">
                         </div>
 
                         <div class="img">
                             <img src="./img/comment02.jpg">
                         </div>
-                        <div class="text">
+                        <div class="name">
                             <h4>Panda Chen</h4>
                             <span class="fivestar"><img src="./img/star.png"><img src="./img/star.png"><img src="./img/star.png"><img src="./img/star.png"><img src="./img/star.png"></span.class></span>
                             <p>講師講解風趣幽默且清楚，可學到當日基酒的相關知識，除了三杯調酒以外，有機會品嚐到其他種相關基酒或是香甜酒</p>
-                            <div class="smallimg">
-                                <img src="./img/about01.jpg">
-                                <img src="./img/content04.jpg">
-                            </div>
+                        </div>
+                        <div class="smallimg">
+                            <img src="./img/recipe008.jpg">
+                            <img src="./img/recipe008.jpg">
                         </div>
 
                         <div class="img">
                             <img src="./img/comment03.jpg">
                         </div>
-                        <div class="text">
+                        <div class="name">
                             <h4>Dada Lin</h4>
                             <span class="fivestar"><img src="./img/star.png"><img src="./img/star.png"><img src="./img/star.png"><img src="./img/star.png"><img src="./img/star.png"></span.class></span>
                             <p>能讓大家自己操作真的很棒，現場也有提供其他酒分享給學員試飲，是說都滿烈的酒也喝不多，但整體來說非常值得推薦。</p>
-                            <div class="smallimg">
-                                <img src="./img/recipe008.jpg">
-                                <img src="./img/recipe009.jpg">
-                                <img src="./img/about03.jpg">
-
-                            </div>
                         </div>
+                        <div class="smallimg">
+                            <img src="./img/recipe008.jpg">
+                            <img src="./img/recipe009.jpg">
+                            <img src="./img/about03.jpg">
+                        </div>
+
                         <div class="page">
                             <ul class="pagination">
                               <li><a href="#">&lt;</a></li>
@@ -166,37 +184,46 @@
                               <li><a href="#">&gt;</a></li>
                             </ul>
                         </div>
-
-
-
-
                     </div>
-
-
-
                 </div>
             </div>
 
         
             <div class="right">
-                <h2 class="price">NT $980</h2>
-                <div class="text"><img src="./img/map.png"><p>分店：台北店、高雄店</p><br>
-                    <img src="./img/pay.png"><p>付款方式 : 信用卡 / ATM / LinePay</p></div>
-                <span class="date"><a href="#selectdate">選擇日期</a></span>
+                <h2 class="price">NT $1080</h2>
+                <div class="text"><img src="./img/map.png"><p>分店：台北店、高雄店</p></div>
+                <div class="text"><img src="./img/pay.png"><p>付款方式 : 信用卡 / ATM / LinePay</p></div>
+                <div class="date"><span class="date"><a href="#selectdate">選擇日期</a></span></div>
             </div>
         </div>
 
     </div>
 
 
+    <a href="#" class="messenger"><img src="./img/messenger.png" alt=""></a>
+    <div class="box">
+        <div class="boxinner">
+            <div class="ask">
+                <img src="./img/logoonly.jpg">
+                <p>請問您要詢問什麼呢?<br>付款、地址、電話...常見問題我可以馬上回答喔！</p>
+            </div>
+            <!-- <div class="guest1">
+                    <p></p>
+                    <img src="./img/heart.png">
+            </div> -->
+        </div>
+        <div class="guestAsk">
+            <input type="text" id="guestAsk" placeholder="在這輸入問題">
+            <button id="send">send</button>
+        </div>
+    </div>
 
-    <a class="messenger" href="https://m.me/MOCO" target="_blank"><img src="./img/messenger.png"/></a>
     <div class="warning">酒後不開車 安全有保障</div>
     <footer>
         <div class="main_footer">
             <ul class="footer">
-                <li>諮詢電話 | 03-3211234</li>
-                <li>客服信箱  | info@moco.com</li>
+                <li><a href="tel:(03)3211234">諮詢電話  | 03-3211234</a></li>
+                <li><a href="mailto:info@moco.com">客服信箱  | info@moco.com</a></li>
                 <li>營業時間  | 10:00-22:00</li>
             </ul>
         </div>
@@ -206,15 +233,166 @@
             <P>  © 2021 MOCO Cocktail Lab. | All Rights Reserved. </P> 
             </div>
     </footer>
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./slick/slick.min.js"></script>
-    <script type="text/javascript">
-       $('.single-item').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-      });
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script>
+
+        $(function () {
+            //datepicker
+            var date = new Date(); 
+            date.setDate(date.getDate()-1); 
+            $("#datepicker").datepicker({ 
+                autoclose: true, 
+                todayHighlight: true,
+                daysOfWeekDisabled: [0, 1, 2, 4, 6],
+                weekStart: 1,   
+                startDate: date,
+                allowInputToggle: true,
+                datesDisabled:'2021-02-10,2021-02-12,2021-02-17',
+            });
+
+            //結帳部分
+            //抓值
+            let num = parseInt($('#count').val());
+            //加
+            $('.max').click(function(){
+                if (num < 5) {
+                    $('#count').val(num += 1);
+                    $('.min').css('background-color','#ab8d3f');
+                }else if(num = 5){
+                    $('#count').val(num += 1);
+                    $(this).css('background-color','#999');
+                }else{
+                    $('#count').val(6);
+                }
+                $('#num').text(num);
+                $('#sub').text(`NT $${num*1080}`);
+                $('#total').text(`NT $${num*1080}`);
+                return false;
+            });
+
+            //減
+            $('.min').click(function () {
+                
+                if (num > 2) {
+                    $('#count').val(num -= 1);
+                    $('.max').css('background-color','#ab8d3f');
+                }else if(num = 2){
+                    $('#count').val(num -= 1);
+                    $(this).css('background-color','#999');
+                }else{
+                    ('#count').val(1);
+                }
+                $('#num').text(num);
+                $('#sub').text(`NT $${num*1080}`);
+                $('#total').text(`NT $${num*1080}`);
+                return false;
+            });
+
+            let coupons = ['sale111','sale200','sale200','sale300','sale400','sale500','sale600'];
+            let sub = $('#num').val();
+            $('#checkCoupon').click(function(){
+                let coupon = $('#coupon').val();
+                let sale = $('#coupon').val().replace(/[^0-9]/ig,"");
+                let total = `${num*1080}`;
+                // alert(coupon);
+                // alert(sale);
+                // alert(sub);
+
+                // $.inArray(物件,物件陣列)
+                //折價券 第一層if...else確認是不是有效折扣碼 第二層分特別的1111-111和其他
+                //*********待修正bug 輸入折扣碼後減少數量，未滿額折扣碼還能用，需在改數量時連動sale
+				if($.inArray(coupon,coupons) == -1){
+					$('#sale').html(`請輸入有效的折扣碼`).css('color','red');
+				}else {
+                    if( coupon == 'sale111' && total >= 1111){
+                        $('#sale').html(`-已折$${sale}`).css('color','#2c104c');
+                        $('#total').text(`NT $${num*1080-sale}`);
+                    }else if( coupon == 'sale111'){
+                        $('#sale').html(`須滿1111元才能使用`).css('color','red');
+                    }else if( total >= 1500 ){
+                        $('#sale').html(`-已折$${sale}`).css('color','#2c104c');
+                        $('#total').text(`NT $${num*1080-sale}`);
+                    }else{
+                        $('#sale').html(`須滿1500元才能使用`).css('color','red');
+                    }
+				}
+            });
+            
+            $('button.buy').click(function(){
+                let failed = false;
+                    
+                $('.each').each(function(){
+                    if($(this).val() == '' || $(this).val() == null){
+                            failed = true;
+                        }
+                    });
+
+                    if(failed == true){
+                        alert('還有欄位沒填完喔');
+                    }else{
+                        alert('跳轉到付款頁面..........');
+                    }
+            })
+
+            //愛心
+            $('.heart').bind("click",function() {
+                var src = ($(this).children().attr('src') === './img/heart.png')
+                    ? './img/heartc.png' 
+                    : './img/heart.png';
+                $(this).children().attr('src', src);
+            });
+
+            //messenger跳出對話框
+            $('.messenger').click(function(event){
+                event.preventDefault();
+                $('.box').fadeToggle(1000);
+            });
+            
+            //對話
+            $('button#send').click(function(){
+                let guestTalkArea = $('.guest>p');
+                let askArea = $('.ask>p');
+                let str = $('#guestAsk').val();
+                let add = `<div class="guest">
+                                    <p>${str}</p>
+                                    <img src="./img/comment02.jpg">
+                                    </div>`
+                let adda = `<div class="ask">
+                                    <img src="./img/logoonly.jpg">
+                                    <p></p>
+                                    </div>`
+                if( str == ''){
+                    $('.boxinner').append(adda).find('.ask:last p').text('請輸入問題喔');
+                }else{
+                    $('.boxinner').append(add).find('.guest').css('justify-content', 'flex-end');
+                    if(str.includes('退') == true || str.includes('取消') == true || str.includes('改') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`這個要寫很長欸，建議你去<a href="coursecontent.html">課程內容的取消與更改</a>看詳細說明`);
+                    }else if(str.includes('電話') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`諮詢電話03-3211234<br>按左下角可直接撥打<br>教室電話可以到訂單內查詢`);
+                    }else if(str.includes('地址') == true || str.includes('交通') == true || str.includes('去') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html('教室地址和大眾運輸交通可以到<a href="classroom.html">教室資訊</a>查詢');
+                    }else if(str.includes('付') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').text('我們提供"信用卡/ATM/Linepay"付款方式');
+                    }else if(str.includes('折') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`折扣碼可在結帳時使用<br>感謝您的提問，特別送您一組折扣碼滿1111折111的折扣碼<br>" sale111 "`);
+                    }else {
+                        $('.boxinner').append(adda).find('.ask:last p').text('謝謝您的提問，我們會在12小時內回覆');
+                    }
+                }
+
+                $('#guestAsk').val('').attr('placeholder','再問阿');
+                //對話框卷軸到最下面
+                $('.boxinner').delay(500).animate({
+                    scrollTop: $('.boxinner').prop('scrollHeight')
+                },500)
+                
+            });
+
+         });
+</script>
 
     </script>
 </body>

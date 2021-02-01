@@ -6,8 +6,6 @@
     <title>MOCO Cocktail Lab.</title>
     <link href="./css/reset.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">    
-    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
     <link href="./css/course.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +13,7 @@
         <div class="header_inner">
             <div class="logo">
                 <a class="logo" href="index.html">
-                <img src="./img/logo.png" width="140px" alt="">
+                    <img src="./img/logo.png" alt="">
                 </a>
             </div>
             <nav>
@@ -27,9 +25,8 @@
                 </ul>
             </nav>
             <div class="icon">
-                <div><img class="iconimg" id="search" src="./img/search.png" width="30px" alt="search"></div>
-                <div><img class="iconimg" id="cart" src="./img/cart.png" width="30px" alt="cart"></div>
-                <div><img class="iconimg" id="user" src="./img/user.png" width="30px" alt="user"></div>
+                <div class="cart"></div>
+                <div class="user"></div>
             </div>
     </header>
     <div class="banner">
@@ -37,184 +34,249 @@
     </div>
     <div class="type">
           <ul>
-            <li><a href="#" class="-on">從最新排</a></li>
-            <li><a href="#">初階課程</a></li>
-            <li><a href="#">進階課程</a></li>
-            <li><a href="#">專業課程</a></li>
+            <li><a href="#" class="on">從最新排</a></li>
+            <li><a href="#" id="low">初階課程</a></li>
+            <li><a href="#" id="high">進階課程</a></li>
+            <li><a href="#" id="pro">專業課程</a></li>
           </ul>
     </div>
     <div class="main">
-        <a href="coursecontent.html">        
-        <div class="course_card">
-            <div class="img">
-                <img src="./img/content02.jpg">
-            </div>
-            <div class="tittle">少女系超簡派調酒</div>
-            <div class="text">每次想參加調酒活動，但總被酒精攝取量嚇到逃跑嗎？只想追求一點點喝酒的感覺，又不想喝醉該怎麼？</div>
-            <div class="other">
-                <img src="./img/star.png">
-                <p class="star">4.9</p>
-                <p class="person">(34)</p>
-                <p class="money">NT</p>
-                <p class="price">$980</p>
-            </div>
+              
+        <div class="course_card low">
+            <a href="coursecontent.html">  
+                <div class="img">
+                    <img src="./img/content02.jpg">
+                </div>
+                <div class="flexbox">
+                    <div class="title">少女系超簡派調酒</div>
+                    <div class="text">每次想參加調酒活動，但總被酒精攝取量嚇到逃跑嗎？只想追求一點點喝酒的感覺，又不想喝醉該怎麼？</div>
+                    <div class="other">
+                        <div class="stars">
+                            <img src="./img/star.png">
+                            <p class="star">4.9</p>
+                            <p class="person">(31)</p>
+                        </div>
+                        <div class="pricep">
+                            <p class="money">NT</p>
+                            <p class="price">$1080</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
             <div class="heart">
                 <img src="./img/heart.png">
-            </div>            
+            </div>
+            <span>新上架
+            </span>
         </div>
-        </a>
-        <a href="coursecontent.html">
-        <div class="course_card">
-            <div class="img">
-                <img src="./img/content03.jpg">
-            </div>
-            <div class="tittle">調酒新手初體驗</div>
-            <div class="text">專為調酒新手開的體驗課，現學、現調、現喝三款經典雞尾酒！回家就能運用所學，為自己特調一杯雞尾酒</div>
-            <div class="other">
-                <img src="./img/star.png">
-                <p class="star">4.8</p>
-                <p class="person">(110)</p>
-                <p class="money">NT</p>
-                <p class="price">$880</p>
-            </div>
+
+        <div class="course_card low">
+            <a href="coursecontent.html">  
+                <div class="img">
+                    <img src="./img/content03.jpg">
+                </div>
+                <div class="flexbox">
+                    <div class="title">調酒新手初體驗</div>
+                    <div class="text">專為調酒新手開的體驗課，現學、現調、現喝三款經典雞尾酒！回家就能運用所學，為自己特調一杯雞尾酒</div>
+                    <div class="other">
+                        <div class="stars">
+                            <img src="./img/star.png">
+                            <p class="star">4.5</p>
+                            <p class="person">(160)</p>
+                        </div>
+                        <div class="pricep">
+                            <p class="money">NT</p>
+                            <p class="price">$980</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
             <div class="heart">
                 <img src="./img/heart.png">
-            </div>            
+            </div>
         </div>
-        </a>
-        <a href="coursecontent.html">
-        <div class="course_card">
-            <div class="img">
-                <img src="./img/content04.jpg">
-            </div>
-            <div class="tittle">Shake搖盪法</div>
-            <div class="text">Shake 的調酒總是不知道要怎麼攪、攪多快、攪多久嗎？無論你的攪拌是會一點點還是完全不會，都歡迎來參加這個活動</div>
-            <div class="other">
-                <img src="./img/star.png">
-                <p class="star">4.9</p>
-                <p class="person">(88)</p>
-                <p class="money">NT</p>
-                <p class="price">$1180</p>
-            </div>
+
+        <div class="course_card high">
+            <a href="coursecontent.html">
+                <div class="img">
+                    <img src="./img/content05.jpg">
+                </div>
+                <div class="flexbox">
+                    <div class="title">后翼棄兵 影集裡的雞尾酒</div>
+                    <div class="text">最近就算看不懂西洋棋也可以喝！一起來調那幾杯在影劇『后翼棄兵』裡女主角喝的雞尾酒</div>
+                    <div class="other">
+                        <div class="stars">
+                            <img src="./img/star.png">
+                            <p class="star">4.5</p>
+                            <p class="person">(23)</p>
+                        </div>
+                        <div class="pricep">
+                            <p class="money">NT</p>
+                            <p class="price">$1180</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
             <div class="heart">
                 <img src="./img/heart.png">
-            </div>            
+            </div>         
         </div>
-        </a>
-        <a href="coursecontent.html">
-        <div class="course_card">
-            <div class="img">
-                <img src="./img/content05.jpg">
-            </div>
-            <div class="tittle">后翼棄兵 影集裡的雞尾酒</div>
-            <div class="text">最近就算看不懂西洋棋也可以喝！一起來調那幾杯在影劇『后翼棄兵』裡女主角喝的雞尾酒</div>
-            <div class="other">
-                <img src="./img/star.png">
-                <p class="star">4.7</p>
-                <p class="person">(10)</p>
-                <p class="money">NT</p>
-                <p class="price">$880</p>
-            </div>
+
+        <div class="course_card low">
+            <a href="coursecontent.html">  
+                <div class="img">
+                    <img src="./img/content04.jpg">
+                </div>
+                <div class="flexbox">
+                    <div class="title">Shake搖盪法</div>
+                    <div class="text">Shake 的調酒總是不知道要怎麼攪、攪多快、攪多久嗎？無論你的攪拌是會一點點還是完全不會，都歡迎來參加這個活動</div>
+                    <div class="other">
+                        <div class="stars">
+                            <img src="./img/star.png">
+                            <p class="star">4.6</p>
+                            <p class="person">(100)</p>
+                        </div>
+                        <div class="pricep">
+                            <p class="money">NT</p>
+                            <p class="price">$980</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
             <div class="heart">
                 <img src="./img/heart.png">
-            </div>            
+            </div>        
         </div>
-        </a>
-        <a href="coursecontent.html">
-        <div class="course_card">
-            <div class="img">
-                <img src="./img/content06.jpg">
-            </div>
-            <div class="tittle">貴腐酒品飲與調酒</div>
-            <div class="text">貴腐酒是王者之酒 酒中之王，從 18 世紀以來一直是名流顯達趨之若鶩的珍釀，每一瓶貴腐酒都述說著所經歷的歷史文化</div>
-            <div class="other">
-                <img src="./img/star.png">
-                <p class="star">4.7</p>
-                <p class="person">(19)</p>
-                <p class="money">NT</p>
-                <p class="price">$780</p>
-            </div>
+
+        <div class="course_card high">
+            <a href="coursecontent.html">
+                <div class="img">
+                    <img src="./img/content06.jpg">
+                </div>
+                <div class="flexbox">
+                    <div class="title">貴腐酒品飲與調酒</div>
+                    <div class="text">貴腐酒是王者之酒 酒中之王，從 18 世紀以來一直是名流顯達趨之若鶩的珍釀，每一瓶貴腐酒都述說著所經歷的歷史文化</div>
+                    <div class="other">
+                        <div class="stars">
+                            <img src="./img/star.png">
+                            <p class="star">4.7</p>
+                            <p class="person">(45)</p>
+                        </div>
+                        <div class="pricep">
+                            <p class="money">NT</p>
+                            <p class="price">$1180</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
             <div class="heart">
                 <img src="./img/heart.png">
-            </div>            
+            </div>      
         </div>
-        </a>
-        <a href="coursecontent.html">
-        <div class="course_card">
-            <div class="img">
-                <img src="./img/content07.jpg">
-            </div>
-            <div class="tittle">你不會想在家裡調的酒</div>
-            <div class="text">通常不是材料多就是調起來很麻煩，比如說材料有十種，切華麗果雕的，或者是材料多又難準備，還要搖 12 分鐘到升天的</div>
-            <div class="other">
-                <img src="./img/star.png">
-                <p class="star">4.9</p>
-                <p class="person">(23)</p>
-                <p class="money">NT</p>
-                <p class="price">$1080</p>
-            </div>
+
+        <div class="course_card pro">
+            <a href="coursecontent.html">
+                <div class="img">
+                    <img src="./img/content07.jpg">
+                </div>
+                <div class="flexbox">
+                    <div class="title">你不會想在家裡調的酒</div>
+                    <div class="text">通常不是材料多就是調起來很麻煩，比如說材料有十種，切華麗果雕的，或者是材料多又難準備，還要搖 12 分鐘到升天的</div>
+                    <div class="other">
+                        <div class="stars">
+                            <img src="./img/star.png">
+                            <p class="star">4.6</p>
+                            <p class="person">(13)</p>
+                        </div>
+                        <div class="pricep">
+                            <p class="money">NT</p>
+                            <p class="price">$1280</p>
+                        </div>
+                    </div>
+                </div>
+            </a> 
             <div class="heart">
                 <img src="./img/heart.png">
-            </div>            
+            </div>           
         </div>
-        </a>
-        <a href="coursecontent.html">
-        <div class="course_card">
-            <div class="img">
-                <img src="./img/content08.jpg">
-            </div>
-            <div class="tittle">環遊世界喝調酒</div>
-            <div class="text">風情萬種巴西嘉年華、星光熠熠加州好萊塢、時尚之都米蘭、度假天堂夏威夷…那些擱置的環遊世界夢，帶你微醺暢遊！</div>
-            <div class="other">
-                <img src="./img/star.png">
-                <p class="star">4.9</p>
-                <p class="person">(31)</p>
-                <p class="money">NT</p>
-                <p class="price">$880</p>
-            </div>
+
+        <div class="course_card low">
+            <a href="coursecontent.html">
+                <div class="img">
+                    <img src="./img/content08.jpg">
+                </div>
+                <div class="flexbox">
+                    <div class="title">環遊世界喝調酒</div>
+                    <div class="text">風情萬種巴西嘉年華、星光熠熠加州好萊塢、時尚之都米蘭、度假天堂夏威夷…那些擱置的環遊世界夢，帶你微醺暢遊！</div>
+                    <div class="other">
+                        <div class="stars">
+                            <img src="./img/star.png">
+                            <p class="star">4.7</p>
+                            <p class="person">(123)</p>
+                        </div>
+                        <div class="pricep">
+                            <p class="money">NT</p>
+                            <p class="price">$980</p>
+                        </div>
+                    </div>
+                </div>
+            </a> 
             <div class="heart">
                 <img src="./img/heart.png">
-            </div>            
+            </div>          
         </div>
-        </a>
-        <a href="coursecontent.html">
-        <div class="course_card">
-            <div class="img">
-                <img src="./img/content09.jpg">
-            </div>
-            <div class="tittle">重型醉漢限定！</div>
-            <div class="text">如果普通的酒單讓你毫無酒意，那你就是我們要招募的重型醉漢！高酒精濃度的進階酒單，一定能滿足你對酒精的渴望</div>
-            <div class="other">
-                <img src="./img/star.png">
-                <p class="star">4.6</p>
-                <p class="person">(55)</p>
-                <p class="money">NT</p>
-                <p class="price">$980</p>
-            </div>
+        
+        <div class="course_card high">
+            <a href="coursecontent.html">
+                <div class="img">
+                    <img src="./img/content09.jpg">
+                </div>
+                <div class="flexbox">
+                    <div class="title">重型醉漢限定！</div>
+                    <div class="text">如果普通的酒單讓你毫無酒意，那你就是我們要招募的重型醉漢！高酒精濃度的進階酒單，一定能滿足你對酒精的渴望</div>
+                    <div class="other">
+                        <div class="stars">
+                            <img src="./img/star.png">
+                            <p class="star">4.7</p>
+                            <p class="person">(66)</p>
+                        </div>
+                        <div class="pricep">
+                            <p class="money">NT</p>
+                            <p class="price">$1080</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
             <div class="heart">
                 <img src="./img/heart.png">
-            </div>            
+            </div>           
         </div>
-        </a>
-        <a href="coursecontent.html">
-        <div class="course_card">
-            <div class="img">
-                <img src="./img/content10.jpg">
-            </div>
-            <div class="tittle">肯巴利經典 大人的味道</div>
-            <div class="text">梁朝偉在傷城中最經典的台詞：『酒好喝的地方，在於它很難喝』。<br>是的，誰說酒苦？人生更苦啊！</div>
-            <div class="other">
-                <img src="./img/star.png">
-                <p class="star">4.5</p>
-                <p class="person">(23)</p>
-                <p class="money">NT</p>
-                <p class="price">$1080</p>
-            </div>
+
+        <div class="course_card high">
+            <a href="coursecontent.html">
+                <div class="img">
+                    <img src="./img/content10.jpg">
+                </div>
+                <div class="flexbox">
+                    <div class="title">肯巴利經典 大人的味道</div>
+                    <div class="text">梁朝偉在傷城中最經典的台詞：『酒好喝的地方，在於它很難喝』。<br>是的，誰說酒苦？人生更苦啊！</div>
+                    <div class="other">
+                        <div class="stars">
+                            <img src="./img/star.png">
+                            <p class="star">4.5</p>
+                            <p class="person">(23)</p>
+                        </div>
+                        <div class="pricep">
+                            <p class="money">NT</p>
+                            <p class="price">$1080</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
             <div class="heart">
                 <img src="./img/heart.png">
-            </div>            
+            </div>      
         </div>
-        </a>
 
     </div>
 
@@ -224,19 +286,36 @@
         <ul class="pagination">
           <li><a href="#">&lt;</a></li>
           <li><a href="#" class="-on">1</a></li>
-          <li><a href="#" >2</a></li>
+          <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">&gt;</a></li>
         </ul>
     </div>
 
-    <a class="messenger" href="https://m.me/MOCO" target="_blank"><img src="./img/messenger.png"/></a>
+    <a href="#" class="messenger"><img src="./img/messenger.png" alt=""></a>
+    <div class="box">
+        <div class="boxinner">
+            <div class="ask">
+                <img src="./img/logoonly.jpg">
+                <p>請問您要詢問什麼呢?<br>付款、地址、電話...常見問題我可以馬上回答喔！</p>
+            </div>
+            <!-- <div class="guest1">
+                    <p></p>
+                    <img src="./img/heart.png">
+            </div> -->
+        </div>
+        <div class="guestAsk">
+            <input type="text" id="guestAsk" placeholder="在這輸入問題">
+            <button>send</button>
+        </div>
+    </div>
+
     <div class="warning">酒後不開車 安全有保障</div>
     <footer>
         <div class="main_footer">
             <ul class="footer">
-                <li>諮詢電話 | 03-3211234</li>
-                <li>客服信箱  | info@moco.com</li>
+                <li><a href="tel:(03)3211234">諮詢電話  | 03-3211234</a></li>
+                <li><a href="mailto:info@moco.com">客服信箱  | info@moco.com</a></li>
                 <li>營業時間  | 10:00-22:00</li>
             </ul>
         </div>
@@ -246,17 +325,90 @@
             <P>  © 2021 MOCO Cocktail Lab. | All Rights Reserved. </P> 
             </div>
     </footer>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./slick/slick.min.js"></script>
-    <script type="text/javascript">
-       $('.single-item').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-      });
 
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $('.type>ul>li>a').click(function(){
+                //type變色
+                event.preventDefault();
+                $('.type>ul>li>a').removeClass('on');
+                $(this).addClass('on');
+                //課程分類
+                $(`.course_card`).css('display','none');
+                $('.pagination>li').css('display','none');
+                $('.-on').css('display','block').parent().css('display','block');
+                if(this.id == 'low') {
+                    $('.low').css('display', 'block');
+                }else if(this.id == 'high') {
+                    $('.high').css('display', 'block');
+                }else if(this.id == 'pro') {
+                    $('.pro').css('display', 'block');
+                }else{
+                    $(`.course_card`).css('display','block');
+                    $('.pagination>li').css('display','inline-block');
+                }
+                
+            });
+            //愛心
+            $('.heart').bind("click",function() {
+                var src = ($(this).children().attr('src') === './img/heart.png')
+                    ? './img/heartc.png' 
+                    : './img/heart.png';
+                $(this).children().attr('src', src);
+            });
+
+            //messenger跳出對話框
+            $('.messenger').click(function(event){
+                event.preventDefault();
+                $('.box').fadeToggle(1000);
+            });
+
+            
+            //對話
+            $('button').click(function(){
+                let guestTalkArea = $('.guest>p');
+                let askArea = $('.ask>p');
+                let str = $('#guestAsk').val();
+                let add = `<div class="guest">
+                                    <p>${str}</p>
+                                    <img src="./img/comment02.jpg">
+                                    </div>`
+                let adda = `<div class="ask">
+                                    <img src="./img/logoonly.jpg">
+                                    <p></p>
+                                    </div>`
+                if( str == ''){
+                    $('.boxinner').append(adda).find('.ask:last p').text('請輸入問題喔');
+                }else{
+                    $('.boxinner').append(add).find('.guest').css('justify-content', 'flex-end');
+                    if(str.includes('退') == true || str.includes('取消') == true || str.includes('改') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`這個要寫很長欸，建議你去<a href="coursecontent.html">課程內容的取消與更改</a>看詳細說明`);
+                    }else if(str.includes('電話') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`諮詢電話03-3211234<br>按左下角可直接撥打<br>教室電話可以到訂單內查詢`);
+                    }else if(str.includes('地址') == true || str.includes('交通') == true || str.includes('去') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html('教室地址和大眾運輸交通可以到<a href="classroom.html">教室資訊</a>查詢');
+                    }else if(str.includes('付') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').text('我們提供"信用卡/ATM/Linepay"付款方式');
+                    }else if(str.includes('折') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`折扣碼可在結帳時使用<br>感謝您的提問，特別送您一組折扣碼滿1111折111的折扣碼<br>" sale111 "`);
+                    }else {
+                        $('.boxinner').append(adda).find('.ask:last p').text('謝謝您的提問，我們會在12小時內回覆');
+                    }
+                }
+
+                $('#guestAsk').val('').attr('placeholder','再問阿');
+                //對話框卷軸到最下面
+                $('.boxinner').delay(500).animate({
+                    scrollTop: $('.boxinner').prop('scrollHeight')
+                },500)
+                
+            });
+        });
+    
+        
 
     </script>
-</body>
 </html>

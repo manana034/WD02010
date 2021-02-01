@@ -15,7 +15,7 @@
         <div class="header_inner">
             <div class="logo">
                 <a class="logo" href="index.html">
-                <img src="./img/logo.png" width="140px" alt="">
+                <img src="./img/logo.png" alt="">
                 </a>
             </div>
             <nav>
@@ -27,9 +27,8 @@
                 </ul>
             </nav>
             <div class="icon">
-                <div><img class="iconimg" id="search" src="./img/search.png" width="30px" alt="search"></div>
-                <div><img class="iconimg" id="cart" src="./img/cart.png" width="30px" alt="cart"></div>
-                <div><img class="iconimg" id="user" src="./img/user.png" width="30px" alt="user"></div>
+                <div class="cart"></div>
+                <div class="user"></div>
             </div>
     </header>
     <div class="banner">
@@ -66,13 +65,30 @@
 
 
 
-    <a class="messenger" href="https://m.me/MOCO" target="_blank"><img src="./img/messenger.png"/></a>
+    <a href="#" class="messenger"><img src="./img/messenger.png" alt=""></a>
+    <div class="box">
+        <div class="boxinner">
+            <div class="ask">
+                <img src="./img/logoonly.jpg">
+                <p>請問您要詢問什麼呢?<br>付款、地址、電話...常見問題我可以馬上回答喔！</p>
+            </div>
+            <!-- <div class="guest1">
+                    <p></p>
+                    <img src="./img/heart.png">
+            </div> -->
+        </div>
+        <div class="guestAsk">
+            <input type="text" id="guestAsk" placeholder="在這輸入問題">
+            <button>send</button>
+        </div>
+    </div>
+
     <div class="warning">酒後不開車 安全有保障</div>
     <footer>
         <div class="main_footer">
             <ul class="footer">
-                <li>諮詢電話 | 03-3211234</li>
-                <li>客服信箱  | info@moco.com</li>
+                <li><a href="tel:(03)3211234">諮詢電話  | 03-3211234</a></li>
+                <li><a href="mailto:info@moco.com">客服信箱  | info@moco.com</a></li>
                 <li>營業時間  | 10:00-22:00</li>
             </ul>
         </div>
@@ -82,17 +98,56 @@
             <P>  © 2021 MOCO Cocktail Lab. | All Rights Reserved. </P> 
             </div>
     </footer>
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./slick/slick.min.js"></script>
-    <script type="text/javascript">
-       $('.single-item').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-      });
+    <script>
+        $(function() {
+            //messenger跳出對話框
+            $('.messenger').click(function(event){
+                event.preventDefault();
+                $('.box').fadeToggle(1000);
+            });
+            
+            //對話
+            $('button').click(function(){
+                let guestTalkArea = $('.guest>p');
+                let askArea = $('.ask>p');
+                let str = $('#guestAsk').val();
+                let add = `<div class="guest">
+                                    <p>${str}</p>
+                                    <img src="./img/comment02.jpg">
+                                    </div>`
+                let adda = `<div class="ask">
+                                    <img src="./img/logoonly.jpg">
+                                    <p></p>
+                                    </div>`
+                if( str == ''){
+                    $('.boxinner').append(adda).find('.ask:last p').text('請輸入問題喔');
+                }else{
+                    $('.boxinner').append(add).find('.guest').css('justify-content', 'flex-end');
+                    if(str.includes('退') == true || str.includes('取消') == true || str.includes('改') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`這個要寫很長欸，建議你去<a href="coursecontent.html">課程內容的取消與更改</a>看詳細說明`);
+                    }else if(str.includes('電話') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`諮詢電話03-3211234<br>按左下角可直接撥打<br>教室電話可以到訂單內查詢`);
+                    }else if(str.includes('地址') == true || str.includes('交通') == true || str.includes('去') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html('教室地址和大眾運輸交通可以到<a href="classroom.html">教室資訊</a>查詢');
+                    }else if(str.includes('付') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').text('我們提供"信用卡/ATM/Linepay"付款方式');
+                    }else if(str.includes('折') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`折扣碼可在結帳時使用<br>感謝您的提問，特別送您一組折扣碼滿1111折111的折扣碼<br>" sale111 "`);
+                    }else {
+                        $('.boxinner').append(adda).find('.ask:last p').text('謝謝您的提問，我們會在12小時內回覆');
+                    }
+                }
 
-
+                $('#guestAsk').val('').attr('placeholder','再問阿');
+                //對話框卷軸到最下面
+                $('.boxinner').delay(500).animate({
+                    scrollTop: $('.boxinner').prop('scrollHeight')
+                },500)
+                
+            });
+        });
     </script>
 </body>
 </html>

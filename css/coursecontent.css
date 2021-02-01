@@ -28,15 +28,16 @@ div.banner h2.pagename{
 
 /* 主內容 */
 div.main{
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
 }
-
+    /* left話很多的那邊 */
 div.left{
-    /* background-color: teal; */
-    width: 800px;
+    margin: auto;
+    max-width: 800px;
     display: inline-block;
     vertical-align: top;
+    padding: 10px;
 }
 
 div.other img{
@@ -48,10 +49,10 @@ div.heart{
 }
 
 div.other{
-    width: 800px;
+    max-width: 800px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-content: center;
     text-align: center;
 }
 
@@ -79,6 +80,10 @@ div.other span{
     color: #2c104c;
     /* display: block; */
     font-family: "Arial";
+}
+
+a {
+    text-decoration: none;
 }
 
 span.title{
@@ -121,52 +126,42 @@ div.bottom div.text{
     background-color: #efede1;
     padding: 10px;
     font-weight: bold;
-    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
     color: #2c104c;
     vertical-align: center;
 }
 
-div.bottom div.text span.price{
-    padding-left: 250px;
-    padding-right: 80px;
+div.bottom div.first{
+    margin-top: 30px;
 }
 
+div.bottom div.last{
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-end;
+}
 
 div.part{
-    width: 80%;
+    width: 90%;
     border-bottom: 3px solid #cdbb8c;
 }
 
-div.right{
-    position: sticky;
-    top: 100px;
-    width: 300px;
-    height: 200px;
-    display: inline-block;
-    border: 3px solid rgba(205,187,140,0.5);
-    padding: 10px;
-    font-size: 16px;
-    line-height: 22px;
-    color: #2c104c;
-}
-
-div.right div.text{
-    margin-bottom: 15px;
-}
-
-div.right div.text p{
-    display: inline-block;
-    padding: 5px;
-    font-size: 16px;
-    color: #2c104c;
-    vertical-align: bottom;
-    font-family: "Arial";
-}
-
-div.option option,div.option select{
+div.option option,div.option select ,div.option input{
+    height: 30px;
     font-size: 16px;
     border-radius: 5px;
-    width: 140px;
+    width: 250px;
+}
+
+input#count{
+    text-align: center;
+    width: 50px;
+}
+
+button#checkCoupon{
+    border-radius: 5px;
 }
 
 div.Q{
@@ -188,13 +183,17 @@ button.add {
   
   }
 
+  button.min {
+    background-color:  #999;
+  }
+
 div.text div{
       display: inline-block;
       font-weight: bold;
 }
 
 div.text span{
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     color: #2c104c;
     font-family: "Arial";  
@@ -217,42 +216,76 @@ div.bottom div.button{
     margin-top: 20px;
   }
 
-  div.bottom div.button span.cart{
-    font-size: 18px;
+  div.bottom div.button button.cart{
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 16px;
     letter-spacing: 1px;
     color: #ab8d3f;
-    display: inline-flex;
     border-radius: 20px;
     border: 2px solid #ab8d3f;
-    padding: 8px 12px;
+    padding: 5px 10px;
     text-align: center;
     text-shadow: #cdbb8c 0px 0px 10px;
-    /* font-weight: bold; */
+    transition: all 0.6s ease 0s;
   }
 
-span.cart a{
-    color: #ab8d3f;
-}
+  div.bottom div.button button.cart:hover, button.buy:hover, span.date:hover{
+    transform: translateY(-10%);
+    transition: all 0.4s ease 0s;
+  }
 
-span.buy, .date{
+button.buy, span.date{
     margin-left: 20px;
     margin-right: 20px;
-    font-size: 18px;
+    font-size: 16x;
     letter-spacing: 2px;
     color: white;
     display: inline-flex;
     border-radius: 20px;
     background-color: #ab8d3f;
-    padding: 10px 15px;
     text-align: center;
-    text-shadow: white 0px 0px 10px;
-    /* font-weight: bold; */
+    text-shadow: white 1px 1px 3px;
+    padding: 5px 15px;
+    transition: all 0.6s ease 0s;
 }
 
-span.buy a, span.date a{
+span.date a{
     color: white;
 }
+    /* right東西少的 */
+div.right{
+    position: sticky;
+    top: 100px;
+    max-width: 500px;
+    /* height: 200px; */
+    display: inline-block;
+    border: 3px solid rgba(205,187,140,0.5);
+    padding: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #2c104c;
+}
 
+div.right div.text{
+    align-items: center;
+    /* width: 100%; */
+}
+
+div.right div.text p{
+    display: inline-block;
+    padding: 5px;
+    margin: 0;
+    font-size: 16px;
+    color: #2c104c;
+    font-family: "Arial";
+}
+
+div.date{
+    margin: 15px 0px;
+}
+
+    /* left下方的評論區 */
 div.sort span.sort{
     font-size: 12px;
     color: #2c104c;
@@ -286,14 +319,13 @@ div.comment div.img{
     vertical-align: top;
 }
 
-div.comment div.text{
-    width: 460px;
+div.comment div.name{
+    width: 60%;
     margin: 10px;
-    border-bottom: 3px dotted #ab8d3f ;
     display: inline-block;
 }
 
-div.comment div.text h4{
+div.comment div.name h4{
     font-size: 16px;
     padding: 5px 0px;
     font-weight: bold;
@@ -301,7 +333,7 @@ div.comment div.text h4{
     font-family: "Arial";
 }
 
-div.comment div.text p{
+div.comment div.name p{
     font-size: 16px;
     line-height: 22px;
     padding: 10px 0px;
@@ -312,6 +344,11 @@ div.comment div.text p{
 span.fivestar img{
     width: 13px;
     margin-right: 2px;
+}
+
+div.smallimg{
+    width: 100%;
+    border-bottom: 3px dotted #ab8d3f;
 }
 
 div.smallimg img{
@@ -327,6 +364,16 @@ div.right img{
     width: 20px;
 }
 
+    /* left裡面的datepicker */
+label {
+    margin-left: 20px;
+}
+#datepicker {
+    width:250px;
+}
+#datepicker > span:hover {
+    cursor: pointer;
+}
 
 /* 頁數 */
 div.page{
@@ -345,7 +392,7 @@ div.page{
   div.page > ul.pagination > li > a{
     display: inline-block;
     text-align: center;
-    padding: 10px 15px;
+    padding: 10px 18px;
     margin: 5px;
     font-size: 1rem;
     color: #2c104c;
@@ -364,4 +411,7 @@ div.page{
     font-weight: bold;
     color: #2c104c;
     border-radius: 50%; 
+  }
+  #sub{
+      margin: 0;
   }

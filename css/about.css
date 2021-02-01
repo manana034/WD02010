@@ -4,7 +4,8 @@ div.banner{
     max-width: 1200px;
     width: 100%;
     height: 600px;
-    background-image: url(../img/aboutbanner.jpg);
+    /* background-image: url(../img/aboutbanner.jpg); */
+    background: linear-gradient(90deg, #efede1 0%, transparent 10%), linear-gradient(-90deg, #efede1 0%, transparent 10%),url(../img/aboutbanner.jpg) center center / 100% 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

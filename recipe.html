@@ -15,7 +15,7 @@
         <div class="header_inner">
             <div class="logo">
                 <a class="logo" href="index.html">
-                <img src="./img/logo.png" width="140px" alt="">
+                <img src="./img/logo.png" alt="">
                 </a>
             </div>
             <nav>
@@ -27,9 +27,8 @@
                 </ul>
             </nav>
             <div class="icon">
-                <div><img class="iconimg" id="search" src="./img/search.png" width="30px" alt="search"></div>
-                <div><img class="iconimg" id="cart" src="./img/cart.png" width="30px" alt="cart"></div>
-                <div><img class="iconimg" id="user" src="./img/user.png" width="30px" alt="user"></div>
+                <div class="cart"></div>
+                <div class="user"></div>
             </div>
     </header>
     <div class="banner">
@@ -41,13 +40,13 @@
                 <h3><img src="./img/Ingrediends.png" alt=""> Ingrediends<span class="arrow"></span></h3>
                     <ul>
                         <li><div><label for="Vodka">
-                                    <input type="checkbox" id="Vodka"> Vodka</label></div>
+                                    <input type="checkbox" id="Vodka" data-target="1"> Vodka</label></div>
                         </li>
-                        <li><div><label for="gin">
-                                    <input type="checkbox" id="gin"> Gin</label></div>
+                        <li><div><label for="Gin">
+                                    <input type="checkbox" id="Gin" data-target="2"> Gin</label></div>
                         </li>
-                        <li><div><label for="rum">
-                            <input type="checkbox" id="rum"> Rum</label></div>
+                        <li><div><label for="Rum">
+                            <input type="checkbox" id="Rum" data-target="3"> Rum</label></div>
                         </li>
                         <li><div><label for="Tequila">
                             <input type="checkbox" id="Tequila"> Tequila</label></div>
@@ -87,108 +86,161 @@
 
         </div>
         <div class="right">
-            <a href="recipecontent.html">
-                <div class="pdct_card">
-                    <div class="frame_pdct">
-                           <img src="./img/recipe001.jpg" alt="" >
-                    </div>
-                    <div class="pdct_text">
-                        <h4>莓牛奶  Strawberry Milk</h4>
-                        <p>溫柔且又夢幻的調酒</p>
-                    </div>
+                <div class="pdct_card Brandy Shake" data-type="1">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe001.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>莓牛奶<br>Strawberry Milk</h4>
+                            <p>溫柔且又夢幻的調酒</p>
+                        </div>
+                    </a>
                 </div>
-            </a>
-            <a href="recipecontent.html">
-                <div class="pdct_card">
-                    <div class="frame_pdct">
-                           <img src="./img/recipe002.jpg" alt="" >
-                    </div>
-                    <div class="pdct_text">
-                        <h4>照葉林  Shoyojurin</h4>
-                        <p>綠茶加烏龍茶　清爽</p>
-                    </div>
-                </div>
-            </a>
-            <a href="recipecontent.html">
-                <div class="pdct_card">
-                    <div class="frame_pdct">
-                           <img src="./img/recipe003.jpg" alt="" >
-                    </div>
-                    <div class="pdct_text">
-                        <h4>南非卓別林 African Chaplin</h4>
-                        <p>南非也有卓別林而且也很好喝</p>
-                    </div>
-                </div>
-            </a>
 
-            <a href="recipecontent.html">
-                <div class="pdct_card">
-                    <div class="frame_pdct">
-                           <img src="./img/recipe004.jpg" alt="" >
-                    </div>
-                    <div class="pdct_text">
-                        <h4>完美琴通寧 Perfect Gin Tonic</h4>
-                        <p>幾乎不會散失氣泡的琴通寧</p>
-                    </div>
+                <div class="pdct_card Mocktaik" data-type="1">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe002.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>照葉林<br>Shoyojurin</h4>
+                            <p>綠茶加烏龍茶　清爽</p>
+                        </div>
+                    </a>
                 </div>
-            </a>
-            <a href="recipecontent.html">
-                <div class="pdct_card">
-                    <div class="frame_pdct">
-                           <img src="./img/recipe005.jpg" alt="" >
-                    </div>
-                    <div class="pdct_text">
-                        <h4>神風特攻隊  Kamikaze</h4>
-                        <p>為勇敢犧牲致敬</p>
-                    </div>
-                </div>
-            </a>
-            <a href="recipecontent.html">
-                <div class="pdct_card">
-                    <div class="frame_pdct">
-                           <img src="./img/recipe006.jpg" alt="" >
-                    </div>
-                    <div class="pdct_text">
-                        <h4>邁泰  Mai Tai</h4>
-                        <p>幫你打造完美的（偽）度假感</p>
-                    </div>
-                </div>
-            </a>
 
-            <a href="recipecontent.html">
-                <div class="pdct_card">
-                    <div class="frame_pdct">
-                           <img src="./img/recipe007.jpg" alt="" >
-                    </div>
-                    <div class="pdct_text">
-                        <h4>白蘭地蛋酒  Brandy Eggnog</h4>
-                        <p>叮叮噹叮叮噹口感綿密的蛋蜜汁</p>
-                    </div>
+                <div class="pdct_card Gin Shake" data-type="2">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe003.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>南非卓別林<br>African Chaplin</h4>
+                            <p>南非也有卓別林而且也很好喝</p>
+                        </div>
+                    </a>
                 </div>
-            </a>
-            <a href="recipecontent.html">
-                <div class="pdct_card">
-                    <div class="frame_pdct">
-                           <img src="./img/recipe008.jpg" alt="" >
-                    </div>
-                    <div class="pdct_text">
-                        <h4>接骨木魔杖  The Elder Wand</h4>
-                        <p>好喝的調酒速速前！</p>
-                    </div>
-                </div>
-            </a>
-            <a href="recipecontent.html">
-                <div class="pdct_card">
-                    <div class="frame_pdct">
-                           <img src="./img/recipe009.jpg" alt="" >
-                    </div>
-                    <div class="pdct_text">
-                        <h4>蘭姆使者  Rum Runner</h4>
-                        <p>浸泡在蘭姆酒的熟成Jalsberg</p>
-                    </div>
-                </div>
-            </a>
 
+                <div class="pdct_card Gin Build">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe004.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>完美琴通寧<br>Perfect Gin Tonic</h4>
+                            <p>幾乎不會散失氣泡的琴通寧</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pdct_card Vodka Shake">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe005.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>神風特攻隊<br>Kamikaze</h4>
+                            <p>為勇敢犧牲致敬</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pdct_card Whisky Roll">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe006.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>邁泰<br>Mai Tai</h4>
+                            <p>幫你打造完美的（偽）度假感</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pdct_card Brandy Shake">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe007.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>白蘭地蛋酒<br>Brandy Eggnog</h4>
+                            <p>叮叮噹叮叮噹口感綿密的蛋蜜汁</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pdct_card Brandy Shake">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe008.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>接骨木魔杖<br>The Elder Wand</h4>
+                            <p>好喝的調酒速速前！</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pdct_card Rum Shake">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe009.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>蘭姆使者<br>Rum Runner</h4>
+                            <p>浸泡在蘭姆酒的熟成Jalsberg</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pdct_card Tequila Blend">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe010.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>霜凍瑪格麗特<br>Frozen Margarita</h4>
+                            <p>有點冷</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pdct_card Tequila Build">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe011.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>龍舌蘭日出<br>Tequila Sunrise</h4>
+                            <p>一起看日出</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="pdct_card Gin Stir">
+                    <a href="recipecontent.html">
+                        <div class="frame_pdct">
+                            <img src="./img/recipe012.jpg" alt="" >
+                        </div>
+                        <div class="he"></div>
+                        <div class="pdct_text">
+                            <h4>沾染到蒼白的色彩<br>Obituary Cocktail</h4>
+                            <p>跟你想像的不太一樣</p>
+                        </div>
+                    </a>
+                </div>
 
 
         </div>
@@ -206,13 +258,30 @@
         </ul>
     </div>
 
-    <a class="messenger" href="https://m.me/MOCO" target="_blank"><img src="./img/messenger.png"/></a>
+    <a href="#" class="messenger"><img src="./img/messenger.png" alt=""></a>
+    <div class="box">
+        <div class="boxinner">
+            <div class="ask">
+                <img src="./img/logoonly.jpg">
+                <p>請問您要詢問什麼呢?<br>付款、地址、電話...常見問題我可以馬上回答喔！</p>
+            </div>
+            <!-- <div class="guest1">
+                    <p></p>
+                    <img src="./img/heart.png">
+            </div> -->
+        </div>
+        <div class="guestAsk">
+            <input type="text" id="guestAsk" placeholder="在這輸入問題">
+            <button>send</button>
+        </div>
+    </div>
+
     <div class="warning">酒後不開車 安全有保障</div>
     <footer>
         <div class="main_footer">
             <ul class="footer">
-                <li>諮詢電話 | 03-3211234</li>
-                <li>客服信箱  | info@moco.com</li>
+                <li><a href="tel:(03)3211234">諮詢電話  | 03-3211234</a></li>
+                <li><a href="mailto:info@moco.com">客服信箱  | info@moco.com</a></li>
                 <li>營業時間  | 10:00-22:00</li>
             </ul>
         </div>
@@ -222,15 +291,99 @@
             <P>  © 2021 MOCO Cocktail Lab. | All Rights Reserved. </P> 
             </div>
     </footer>
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./slick/slick.min.js"></script>
-    <script type="text/javascript">
-       $('.single-item').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: true,
-      });
+    <script>
+		$(document).ready(function () {
+
+            // $("label.abc").on("click", function(){
+            //     console.log("tttt");
+            // })
+            //************還沒做完
+			$(':checkbox').change(function () {
+                // let type = ['Vodka','Gin'];
+                // console.log($(this).attr("data-target"));
+                let target = $(this).attr("data-target");
+                $('.pdct_card').css('display', 'none');
+
+                $('.pdct_card').each(function(){
+                    //console.log($(item).attr("data-type"));
+                    // $.inArray(變數,type)
+                    if($('.pdct_card').attr("data-type") == target){
+                        let type = $(this).attr("data-type");
+                        console.log($('.pdct_card').attr("data-type"));
+                        $(this).css('display', 'block');
+                        // ($.inArray(bread,breads) != -1)
+                    };
+
+                });
+
+                // $('.pdct_card').css('display', 'none');
+
+                // if (this.id == 'Vodka') {
+                //     $('.Vodka').css('display', 'block');
+				// }
+
+				// if (this.id == 'Gin') {
+				// 	$('.Gin').css('display', 'block');
+				// }
+				// if (this.id == 'Rum') {
+				// 	$('.Rum').css('display', 'block');
+                // }
+
+                // if($(':checkbox').checked == 'false'){
+                //     $('.pdct_card').css('display', 'block');
+                // };
+
+            });
+
+
+            //messenger跳出對話框
+            $('.messenger').click(function(event){
+                event.preventDefault();
+                $('.box').fadeToggle(1000);
+            });
+            
+            //對話
+            $('button').click(function(){
+                let guestTalkArea = $('.guest>p');
+                let askArea = $('.ask>p');
+                let str = $('#guestAsk').val();
+                let add = `<div class="guest">
+                                    <p>${str}</p>
+                                    <img src="./img/comment02.jpg">
+                                    </div>`
+                let adda = `<div class="ask">
+                                    <img src="./img/logoonly.jpg">
+                                    <p></p>
+                                    </div>`
+                if( str == ''){
+                    $('.boxinner').append(adda).find('.ask:last p').text('請輸入問題喔');
+                }else{
+                    $('.boxinner').append(add).find('.guest').css('justify-content', 'flex-end');
+                    if(str.includes('退') == true || str.includes('取消') == true || str.includes('改') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`這個要寫很長欸，建議你去<a href="coursecontent.html">課程內容的取消與更改</a>看詳細說明`);
+                    }else if(str.includes('電話') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`諮詢電話03-3211234<br>按左下角可直接撥打<br>教室電話可以到訂單內查詢`);
+                    }else if(str.includes('地址') == true || str.includes('交通') == true || str.includes('去') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html('教室地址和大眾運輸交通可以到<a href="classroom.html">教室資訊</a>查詢');
+                    }else if(str.includes('付') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').text('我們提供"信用卡/ATM/Linepay"付款方式');
+                    }else if(str.includes('折') == true){
+                        $('.boxinner').append(adda).find('.ask:last p').html(`折扣碼可在結帳時使用<br>感謝您的提問，特別送您一組折扣碼滿1111折111的折扣碼<br>" sale111 "`);
+                    }else {
+                        $('.boxinner').append(adda).find('.ask:last p').text('謝謝您的提問，我們會在12小時內回覆');
+                    }
+                }
+
+                $('#guestAsk').val('').attr('placeholder','再問阿');
+                //對話框卷軸到最下面
+                $('.boxinner').delay(500).animate({
+                    scrollTop: $('.boxinner').prop('scrollHeight')
+                },500)
+                
+            });
+		});
 
 
     </script>

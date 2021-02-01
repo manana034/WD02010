@@ -1,20 +1,38 @@
-.slick-prev:before, .slick-next:before{
-  color:#ab8d3f;
-}
-
 a{
   text-decoration: none;
 }
 div.main_top{
-  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-div.single-item{
+/* banner的輪播 */
+div.swiper1 {
   width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+div.swiper1 .swiper-slide {
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
 div.img_p1 {
   position: relative;
 }
@@ -70,229 +88,362 @@ div.main_bottom{
 }
 
 div.course{
-  margin: 80px auto;
-
+  margin: 100px auto;
 }
 
 div.course div.title{
+  margin: auto;
   position: relative;
-  width: 550px;
+  width: 300px;
   height: 130px;
   background-image: url("../img/course.png");
+  background-size: contain;
   background-repeat: no-repeat;
-  margin: auto;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-div.course div.title h2{
-  width: 106px;
+div.course div.title h2,
+div.recipe div.title h2,
+div.classroom div.title h2 {
+  margin: auto;
   font-size: 24px;
+  text-shadow: white 0px 0px 5px;
   letter-spacing: 2px;
   color: #2C104C;
   font-weight: bold;
   padding-bottom: 10px;
   border-bottom: 3px solid #2C104C;
   position: absolute;
-  top: 50px;
-  left: 220px;
+  bottom: 20%;
+  right: 25%;
 }
 
-div.course div.title p{
+div.course div.title p,
+div.recipe div.title p,
+div.classroom div.title p {
   font-size: 14px;
   color: #2C104C;
-  padding: 10px;
   position: absolute;
-  top: 90px;
-  left: 220px;
+  bottom: 5%;
+  right: 29%;
 }
 
 div.course_inner {
   margin: auto;
-  display: flex; 
-  width: 1100px;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  font-size: 0;
+  max-width: 1100px;
+  margin-bottom: 20px;
+  /* background-color: #fff; */
 }
 
-
-div.course_inner >div.course1 {
-  width: 300px;
-  height: 380px;
-  box-shadow: 5px 5px 15px gray;
-  text-align: center;
-  background-color: #623b2a;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-div.course_inner >div.course2 {
-  width: 300px;
-  height: 380px;
-  box-shadow: 5px 5px 15px gray;
-  text-align: center;
-  background-color: #2c104c;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-div.course_inner >div.course3{
-  width: 300px;
-  height: 380px;
-  box-shadow: 5px 5px 15px gray;
-  text-align: center;
-  background-color: #018522;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-div.course_inner p {
-  font-size: 18px;
-  color: white;
-  letter-spacing: 1px;
-  text-shadow: white 0px 0px 20px;
-  text-align: center;
-  padding-top: 30px;
-}
-
-div.recipe div.title{
-  position: relative;
-  width: 550px;
-  height: 130px;
-  background-image: url("../img/recipe.png");
-  background-repeat: no-repeat;
+div.type ul{
   margin: auto;
+  margin-top: 30px;
+  max-width: 550px;
+  display: flex;
+  justify-content: space-around;
 }
 
-div.recipe div.title h2{
-  width: 106px;
-  font-size: 24px;
-  letter-spacing: 2px;
-  color: #2C104C;
+div.type li{
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  /* margin: 10px; */
+}
+
+div.type li > a{
+  padding: 5px;
+  color: #2c104c;
+}
+
+div.type li > a.on{
+  background-color: #ab8d3f;
+  /* font-weight: bold; */
+  text-shadow: white 0px 0px 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+div.type li > a:hover{
+  background-color: #ab8d3f;
+  /* font-weight: bold; */
+  text-shadow: white 0px 0px 10px;
+  color: white;
+  border-radius: 5px;
+}
+
+/* course的輪播 */
+.swiper-button-prev{
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l4.2%2C4.2L8.4%2C22l17.8%2C17.8L22%2C44L0%2C22z'%20fill%3D'%23ab8d3f'%2F%3E%3C%2Fsvg%3E");
+  width: 10%;
+  height: 10%;
+}
+.swiper-button-next{
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L5%2C44l-4.2-4.2L18.6%2C22L0.8%2C4.2L5%2C0z'%20fill%3D'%23ab8d3f'%2F%3E%3C%2Fsvg%3E");
+  width: 10%;
+  height: 10%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ab8d3f;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.swiper2 div.swiper-slide{
+  width: 250px;
+  /* height: 300px; */
+  border-radius: 10px; 
+  overflow: hidden;
+  margin: 30px 0px;
+  box-shadow: 5px 5px 10px gray;  
+  position: relative;
+}
+
+div.swiper2 div.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: hsl(44, 34%, 79%);
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+div.swiper2 div.swiper-slide span{
+  font-size: 16px;
+  background-color: rgba(44, 16, 76,0.3);
+  color: #2c104c;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 3px;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+
+div.swiper2 div.swiper-slide div.flexbox{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: hsl(44, 34%, 79%);
+}
+
+div.swiper2 div.swiper-slide div.-title{
+  /* width: 100%; */
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 20px;
   font-weight: bold;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #2C104C;
-  position: absolute;
-  top: 50px;
-  left: 220px;
+  letter-spacing: 1px;
+  color: #2c104c;
+  margin: auto;
+  font-family: "Arial";
+  border-bottom: 3px solid #ab8d3f;
+  /* overflow: hidden; */
 }
-
-div.recipe div.title p{
-  font-size: 14px;
-  color: #2C104C;
-  padding: 10px;
-  position: absolute;
-  top: 90px;
-  left: 210px;
-}
-
-div.recipe div.recipe_inner div.img{
-  width: 500px;
-  height: 400px;
-  display: inline-block;
-  position: relative;
-  left: 170px;
-  top: 20px;
-}
-div.recipe div.recipe_inner div.img img{
-  box-shadow: 5px 5px 15px gray;
-}
-
-div.recipe div.recipe_inner div.bottom{
-  width: 400px;
-  height: 315px;
-  background-color: white;
-  display: inline-block;
-  border-radius: 10px;
-  box-shadow: 5px 5px 15px gray;
-  position: relative;
-}
-
-div.recipe div.recipe_inner div.bottom div.article{
-  position: absolute;
-  top: 10px;
-  left: 50px;
+div.swiper2 div.swiper-slide div.text{
+  width: 100%;
+  /* text-align: center; */
+  font-size: 16px;
   line-height: 22px;
+  color: #2c104c;
+  margin: 10px auto;
+  font-family: "Arial";
+  overflow: hidden;
+  height: 0;
+  transition: all 0.8s ease 0s;
+  padding: 0px 10px;
+}
+
+div.swiper2 div.swiper-slide:hover div.text{
+  height: 70px;
+}
+
+div.swiper2 div.swiper-slide div.other{
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+div.swiper2 div.swiper-slide div.other img{
+  width: 13px;
+}
+
+div.swiper2 div.swiper-slide div.other p.star{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Arial";
+  color: black;
+}
+
+div.swiper2 div.swiper-slide div.other p.person{
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Arial";
+  color: #2c104c;
+}
+
+div.swiper2 div.swiper-slide div.other p.money{
+  display: inline-block;
+  font-size: 18px;
   color: #2c104c;
   font-family: "Arial";
 }
 
-div.recipe div.recipe_inner div.bottom div.article h3{
-  font-size: 20px;
+div.swiper2 div.swiper-slide div.other p.price {
+  display: inline-block;
   font-weight: bold;
+  font-size: 22px;
   letter-spacing: 1px;
-  color: #ab8d3f;
-  border-bottom: 3px solid #efede1;
-  width: 78%;
-  margin: 3px 0px;
+  color: #2c104c;
+  text-shadow: white 0px 0px 50px;
   font-family: "Arial";
 }
 
-div.recipe div.recipe_inner div.bottom div.article p.title2{
-  font-size: 16px;
-  /* font-weight: bold; */
-  letter-spacing: 1px;
-  color: #ab8d3f;
-  padding-top: 5px;
+div.heart img{
+  display: inline-block;    
+  position: absolute;
+  width: 30px;
+  padding: 5px;
+  right: 2%;
+  top: 2%;
+  border-radius: 13px;
+  cursor: pointer;
+  background-color: rgba(239, 237, 225,0.2);
+}
+/* course的輪播結束 */
+
+div.recipe{
+  margin: 100px 0px;
 }
 
-div.recipe div.recipe_inner div.bottom div.article div.button{
+div.recipe div.title{
+  margin: auto;
+  position: relative;
+  width: 300px;
+  height: 130px;
+  background-image: url("../img/recipe.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.recipe div.title p{
+  right: 23%;
+}
+
+div.recipe_inner {
+  margin: auto;
+  margin-bottom: 20px;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.recipe_inner div.pdct_card{
+	width: 20%;
+  transition: .4s;
+  overflow: hidden;
+  position: relative;
+
+  background-color: #cdbb8c;
+  border-radius: 10px; 
+  /* padding: 10px; */
+  margin: 30px 0px;
+  box-shadow: 5px 5px 10px gray;
+}
+
+div.recipe_inner div.pdct_card div.bgimg{
+  background: radial-gradient( white 40%, transparent 70%);
+}
+
+
+div.recipe_inner div.pdct_card h4{
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #2c104c;
+  /* margin: 10px; */
+  font-family: "Arial";
+}
+
+div.recipe_inner div.pdct_card p{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(239, 237, 225, 0.5);
+  transform: translateY(100%);
+  transition: .4s;
+  padding: 10px;
+  font-size: 16px;
+  color: #2c104c;
+  font-family: "Arial";
+}
+
+div.recipe_inner div.pdct_card:hover img{
+	transform: rotate(20deg) translateY(-20%);
+	transition: .4s;
+}
+
+div.recipe_inner div.pdct_card:hover p{
+  overflow: visible;
+  transform: translateY(-130%);
+	transition: .4s;
+}
+
+div.recipe_inner div.pdct_card:hover {
+  overflow: visible;
+}
+
+div.recipe div.recipe_bottom,
+div.course div.course_bottom {
+  margin: auto;
+  max-width: 1000px;
   display: flex;
   justify-content: flex-end;
-  width: 300px;
-  height: 30px;
-}
-
-div.recipe div.recipe_inner div.bottom div.article div.button span{
-  width: 90px;
-  font-size: 16px;
-  letter-spacing: 1px;
-  color: white;
-  display: inline-flex;
-  border-radius: 20px;
-  background-color: #ab8d3f;
-  padding: 5px 5px 5px 10px;
-  text-shadow: white 0px 0px 10px;
+  text-align: center;
 }
 
 div.classroom div.title{
+  margin: auto;
   position: relative;
-  width: 550px;
+  width: 300px;
   height: 130px;
   background-image: url("../img/classroom.png");
+  background-size: contain;
   background-repeat: no-repeat;
-  margin: auto;
-}
-
-div.classroom div.title h2{
-  width: 106px;
-  font-size: 24px;
-  letter-spacing: 2px;
-  color: #2C104C;
-  font-weight: bold;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #2C104C;
-  position: absolute;
-  top: 50px;
-  left: 220px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 div.classroom div.classroom_inner{
-  width: 900px;
-  height: 500px;
+  max-width: 900px;
   margin: auto;
   position: relative;
-}
-
-div.classroom div.classroom_inner div.button{
-  display: flex;
-  justify-content: flex-end;
-  width: 300px;
-  height: 30px;
+  /* background-color: #fff; */
 }
 
 div.classroom div.classroom_inner p{
-  width: 500px;
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -301,21 +452,36 @@ div.classroom div.classroom_inner p{
   background-color: rgba(205,187,140,0.3);
   padding: 20px;
   position: absolute;
-  top: 50%;
+  bottom: 50%;
   left: 0px;
 }
 
-div.classroom div.classroom_inner div.button span{
-  width: 90px;
+div.classroom_inner div.button {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+}
+
+div.button span{
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #2c104c;
+  font-weight: bold;
+  /* display: inline- flex; */
+  border: 2px solid #ab8d3f;
+  border-radius: 20px;
+  padding: 5px 10px;
+  text-shadow: white 0px 0px 10px;
+} 
+
+div.button:hover span{
   font-size: 16px;
   letter-spacing: 1px;
   color: white;
-  display: inline-flex;
+  font-weight: bold;
+  /* display: inline-flex; */
   border-radius: 20px;
   background-color: #ab8d3f;
-  padding: 5px 5px 5px 10px;
+  padding: 5px 10px;
   text-shadow: white 0px 0px 10px;
-  position: absolute;
-  bottom: 150px;
-  left: 100px;
-}
+} 

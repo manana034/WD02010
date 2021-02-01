@@ -3,7 +3,8 @@ div.banner{
     margin: 0 auto;
     max-width: 1200px;
     height: 600px;
-    background-image: url(../img/bannerimg03.jpg);
+    /* background-image: url(../img/bannerimg03.jpg); */
+    background: linear-gradient(90deg, #efede1 0%, transparent 10%),linear-gradient(-90deg, #efede1 0%, transparent 10%),url(../img/bannerimg03.jpg) center center / 100% 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,7 +28,7 @@ div.banner h2.pagename{
 div.type ul{
     margin: auto;
     margin-top: 30px;
-    width: 900px;
+    max-width: 900px;
     display: flex;
     justify-content: space-around;
 }
@@ -45,7 +46,7 @@ div.type li > a{
     color: #2c104c;
   }
 
-div.type li > a.-on{
+div.type li > a.on{
     background-color: #ab8d3f;
     /* font-weight: bold; */
     text-shadow: white 0px 0px 10px;
@@ -63,28 +64,44 @@ div.type li > a:hover{
 /* main */
 div.main{
     /* background-color: yellow; */
-    width: 1180px;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: auto;
 }
 div.course_card{
-    background-color: hsl(44, 34%, 79%);
-    width: 300px;
+    width: 30%;
+    /* height: 300px; */
     border-radius: 10px; 
-    /* padding: 10px; */
-    height: 390px;
     overflow: hidden;
     margin: 30px 0px;
     box-shadow: 5px 5px 10px gray;  
     position: relative;
 }
 
+div.course_card span{
+    font-size: 16px;
+    background-color: rgba(44, 16, 76,0.3);
+    color: #2c104c;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 3px;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
 
-div.tittle{
+div.flexbox{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: hsl(44, 34%, 79%);
+}
+
+div.title{
     width: 80%;
-    padding: 5px 0px;
+    padding: 10px 0px;
     text-align: center;
     font-size: 20px;
     font-weight: bold;
@@ -96,34 +113,30 @@ div.tittle{
 }
 div.text{
     width: 100%;
-    text-align: center;
+    /* text-align: center; */
     font-size: 16px;
     line-height: 22px;
     color: #2c104c;
-    /* margin: 10px; */
+    margin: 10px auto;
     font-family: "Arial";
-    padding: 10px 0;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.8s ease 0s;
+    padding: 0px 10px;
+}
+
+div.course_card:hover div.text{
+    height: 70px;
 }
 
 div.other{
-    width: 280px;
-    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
 }
 
 div.other img{
     width: 13px;
-}
-
-div.heart img{
-    display: inline-block;    
-    position: absolute;
-    width: 30px;
-    padding: 5px;
-    right: 10px;
-    top: 10px;
-    border-radius: 12px;
-    cursor: pointer;
-    background-color: rgba(239, 237, 225,0.3);
 }
 
 div.other p.star{
@@ -143,21 +156,31 @@ div.other p.person{
 
 div.other p.money{
     display: inline-block;
-    padding-left: 100px;
     font-size: 18px;
     color: #2c104c;
     font-family: "Arial";
 }
 
-div.other p.price{
+div.other p.price {
     display: inline-block;
-    padding-left: 5px;
     font-weight: bold;
     font-size: 22px;
     letter-spacing: 1px;
     color: #2c104c;
-    text-shadow: #efede1 0px 0px 50px;
+    text-shadow: white 0px 0px 50px;
     font-family: "Arial";
+}
+
+div.heart img{
+    display: inline-block;    
+    position: absolute;
+    width: 30px;
+    padding: 5px;
+    right: 10px;
+    top: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    background-color: rgba(239, 237, 225,0.2);
 }
 
 /* 頁數 */
