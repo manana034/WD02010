@@ -277,7 +277,7 @@ header {
     position: fixed;
     bottom: 80px;
     right: 50px;
-    z-index: 5;
+    z-index: 555;
   }
   
   .messenger:hover{
@@ -358,9 +358,9 @@ header {
 
     @media(max-width:575px){
       .box {
-        width: 250px;
-        bottom: 80px;
-        right: 10px;
+        width: 300px;
+        bottom: 130px;
+        right: 20px;
       }
     }
   /* footer結束 */
