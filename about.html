@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,7 +84,7 @@
         </div>
         <div class="guestAsk">
             <input type="text" id="guestAsk" placeholder="在這輸入問題">
-            <button>send</button>
+            <button id='send'>send</button>
         </div>
     </div>
 
@@ -122,7 +122,7 @@
             });
             
             //對話
-            $('button').click(function(){
+            $('#send').click(function(){
                 let guestTalkArea = $('.guest>p');
                 let askArea = $('.ask>p');
                 let str = $('#guestAsk').val();

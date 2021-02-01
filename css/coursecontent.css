@@ -66,6 +66,7 @@ div.banner h2.pagename{
 div.main{
     max-width: 1200px;
     margin: auto;
+    display: flex;
 }
     /* left話很多的那邊 */
 div.left{
@@ -205,7 +206,7 @@ input#coupon {
     border-radius: 5px;
 }
 
-input:focus {
+input#coupon:focus {
     border-color: #ab8d3f;
     background-color: rgb(235, 217, 170);
 }
@@ -237,10 +238,14 @@ button.add {
     border-radius: 50%;
     outline: none; 
   }
-
+  
   button.min {
-    background-color:  #999;
-  }
+      background-color:  #999;
+    }
+
+button.hamburger{
+    outline: none; 
+}
 
 div.text div{
       display: inline-block;
@@ -322,6 +327,7 @@ div.right{
     font-size: 16px;
     line-height: 22px;
     color: #2c104c;
+    height: 200px;
 }
 
 div.right div.text{
@@ -336,6 +342,10 @@ div.right div.text p{
     font-size: 16px;
     color: #2c104c;
     font-family: "Arial";
+}
+
+div.right img{
+    width: 20px;
 }
 
 div.date{
@@ -406,7 +416,7 @@ span.fivestar img{
 div.smallimg{
     width: 100%;
     border-bottom: 3px dotted #ab8d3f;
-    padding-left: 150px;
+    padding-left: 100px;
 }
 
 div.smallimg img{
@@ -417,9 +427,63 @@ div.smallimg img{
     height: 100px;
     overflow: hidden;
 }
+@media(max-width:575px){
+    div.smallimg{
+        width: 100%;
+        border-bottom: 3px dotted #ab8d3f;
+        padding-left: 0px;
+        padding: 5px;
+        display: flex;
+        justify-content: start;
+    }
+}
 
-div.right img{
+div.rwdtop{
+    display: none;
+    width: 100%;
+}
+
+div.rwdtop div.price{
+    display: block;
+    width: 140px;
+    align-self: center;
+}
+
+div.rwdtop div.rwdicon{
+    display: block;
+}
+
+div.rwdicon img {
     width: 20px;
+    height: 20px;
+}
+
+div.rwdicon p {
+    display: inline-block;
+    margin: 0;
+    padding: 5px;
+}
+div.rwdbottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(205, 187, 140,0.6);
+    text-align: center;
+    display: none;
+}
+
+@media(max-width:767px){
+    div.right{
+        display: none;
+    }
+    div.rwdtop{
+        display: flex;
+    }
+    div.rwdbottom{
+        display: block;
+    }
+
 }
 
     /* left裡面的datepicker */

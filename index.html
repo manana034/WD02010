@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hans">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOCO Cocktail Lab.</title>
-    <link href="./css/reset.css" rel="stylesheet">
-    <link href="./css/common.css" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
-    <link href="./css/index.css" rel="stylesheet">
-    <link href="./css/coupon.css" rel="stylesheet">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/hamburgers.css" rel="stylesheet">   
+    <link href="./css/common.css" rel="stylesheet">    
+    <link href="./css/coupon.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
 
 </head>
 <body>
@@ -53,11 +54,16 @@
                     <li><a href="recipe.html">酒譜專區</a></li>
                     <li><a href="classroom.html">教室資訊</a></li>
                 </ul>
+                <div class="icon">
+                    <div class="cart"></div>
+                    <div class="user"></div>
+                </div>
             </nav>
-            <div class="icon">
-                <div class="cart"></div>
-                <div class="user"></div>
-            </div>
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </div>
     </header>
     <div class="main_top">
@@ -398,7 +404,7 @@
         </div>
         <div class="guestAsk">
             <input type="text" id="guestAsk" placeholder="在這輸入問題">
-            <button>send</button>
+            <button id="send">send</button>
         </div>
     </div>
 
@@ -415,9 +421,9 @@
         </div>
         <div class="copyright">
             <P>  © 2021 MOCO Cocktail Lab. | All Rights Reserved. </P> 
-            </div>
+        </div>
     </footer>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
 
@@ -452,6 +458,14 @@
 
 
         $(document).ready(function(){
+            //hamburger和nav的切換
+            $('button.hamburger').on('click', function(){
+                $(this).toggleClass('is-active');
+            });
+            $('.hamburger').click(function(){
+                $('nav').fadeToggle();
+            });
+            
             $('.type>ul>li>a').click(function(){
                 //type變色
                 event.preventDefault();
@@ -487,7 +501,7 @@
             });
             
             //對話
-            $('button').click(function(){
+            $('#send').click(function(){
                 let guestTalkArea = $('.guest>p');
                 let askArea = $('.ask>p');
                 let str = $('#guestAsk').val();

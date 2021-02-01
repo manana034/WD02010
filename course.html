@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MOCO Cocktail Lab.</title>
     <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/hamburgers.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">    
     <link href="./css/course.css" rel="stylesheet">
 </head>
@@ -23,11 +24,16 @@
                     <li><a href="recipe.html">酒譜專區</a></li>
                     <li><a href="classroom.html">教室資訊</a></li>
                 </ul>
+                <div class="icon">
+                    <div class="cart"></div>
+                    <div class="user"></div>
+                </div>
             </nav>
-            <div class="icon">
-                <div class="cart"></div>
-                <div class="user"></div>
-            </div>
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+            </button>
         </div>
     </header>
     <div class="banner">
@@ -307,7 +313,7 @@
         </div>
         <div class="guestAsk">
             <input type="text" id="guestAsk" placeholder="在這輸入問題">
-            <button>send</button>
+            <button id="send">send</button>
         </div>
     </div>
 
@@ -332,6 +338,14 @@
     <script>
 
         $(document).ready(function(){
+            //hamburger和nav的切換
+                $('button.hamburger').on('click', function(){
+                $(this).toggleClass('is-active');
+            });
+            $('.hamburger').click(function(){
+                $('nav').fadeToggle();
+            });
+
             $('.type>ul>li>a').click(function(){
                 //type變色
                 event.preventDefault();
@@ -369,7 +383,7 @@
 
             
             //對話
-            $('button').click(function(){
+            $('#send').click(function(){
                 let guestTalkArea = $('.guest>p');
                 let askArea = $('.ask>p');
                 let str = $('#guestAsk').val();

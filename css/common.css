@@ -356,11 +356,19 @@ header {
     text-shadow: 0px 0px 3px gray;
     }
 
+    @media(max-width:767px){
+      ul.footer{
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 10px;
+      }
+    }
+
     @media(max-width:575px){
       .box {
-        width: 300px;
-        bottom: 130px;
-        right: 20px;
+        bottom: 160px;
+        right: 30px;
       }
     }
   /* footer結束 */
