@@ -294,6 +294,7 @@
             let coupons = ['sale111','sale200','sale200','sale300','sale400','sale500','sale600'];
             let sub = $('#num').val();
             $('#checkCoupon').click(function(){
+                event.preventDefault();
                 let coupon = $('#coupon').val();
                 let sale = $('#coupon').val().replace(/[^0-9]/ig,"");
                 let total = `${num*1080}`;
