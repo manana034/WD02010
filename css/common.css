@@ -355,4 +355,12 @@ header {
     background: white;
     text-shadow: 0px 0px 3px gray;
     }
+
+    @media(max-width:575px){
+      .box {
+        width: 250px;
+        bottom: 80px;
+        right: 10px;
+      }
+    }
   /* footer結束 */
