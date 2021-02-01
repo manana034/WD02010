@@ -23,7 +23,7 @@ a{
 /* header */
 header {
   width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     /* height: 80px; */
     position: fixed;
     top: 0;
@@ -46,14 +46,34 @@ header {
   div.header_inner div.logo img{
     max-width: 160px;
   }
+  nav {
+    max-width: 800px;
+    width: 800px;
+    /* background-color: yellow; */
+    margin: 0px 10px;
+    display: flex;
+    /* 大螢幕 */
+    justify-content: space-between;
+    /* 漢堡出來時767以下 */
+    /* justify-content: flex-end; */
+  }
+  .hamburger{
+    width: 15px;
+    height: 15px;
+    color: #2c104c;
+    display: none;
+    margin: 0px 30px;
+  }
   
   ul.nav {
     display: flex;
     align-items: center;
+    /* display: none; */
   }
+
   ul.nav li {
     margin: 10px;
-    width: 100px;
+    width: 90px;
     position: relative;
   }
   
@@ -147,6 +167,57 @@ header {
     border-radius: 50px;
   }
 
+  @media(max-width:767px){
+    /* nav */
+    button.hamburger{
+      display: block;
+    }
+    nav {
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: 75px;
+      background-color: rgba(205, 187, 140,0.9);
+      margin: 0;
+    }
+    ul.nav {
+      display: block;
+      text-align: center;
+    }
+    ul.nav li{
+      width: 100%;
+      margin: 0;
+      padding: 20px;
+    }
+    ul.nav li a{
+      padding: 10px 100px;
+    }
+    ul.nav li:active{
+      background-color: #fff;
+    }
+    ul.nav li:hover {
+      background-color: rgba(255, 255, 255, 0.3)
+    }
+    #about:after{
+      background-color: transparent;
+      width: 0;
+      height: 0;
+    }
+    ul.nav li:hover a::after{
+      background-color: transparent;
+      width: 0;
+      height: 0;
+    }
+
+    div.icon{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 15px;
+    }
+
+  }
+
   /* header結束 */
   
   /* footer */
@@ -216,7 +287,7 @@ header {
   .box {
     display: none;
     margin: 0;
-    width: 400px;
+    width: 350px;
     position: fixed;
     bottom: 80px;
     right: 110px;

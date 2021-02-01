@@ -9,20 +9,22 @@ ul.nav2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 5px;
   }
   
   ul.nav2 li {
     border-radius: 5px;
     padding: 2px 10px;
-    background: rgb(255, 255, 255,.9);
+    background: rgb(205, 187, 140,.1);
     margin-top: 5px;
     position: relative;
   }
   
   ul.nav2 li a {
     font-size: 16px;
+    font-weight: bold;
     letter-spacing: 1px;
-    color: #2c104c;
+    color: #ab8d3f;;
     line-height: 20px;
   }
   
