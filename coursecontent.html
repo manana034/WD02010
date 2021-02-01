@@ -31,11 +31,20 @@
                 <div class="cart"></div>
                 <div class="user"></div>
             </div>
+        </div>
+        <div class="header_inner2">
+            <ul class="nav2">
+                <li><a href="#title">課程內容</a></li>
+                <li><a href="#selectdate">選擇日期</a></li>
+                <li><a href="#cancelchange">取消與更改</a></li>
+                <li><a href="#comment">評價</a></li>
+            </ul>
+        </div>
     </header>
     <div class="banner">
         <h2 class="pagename">課程資訊 - 少女系超簡派調酒</h2>
     </div>
-    <div class="main">
+    <div class="main"  id="title">
         <h2>少女系超簡派調酒</h2>
         <div class="left">
             <div class="other">
@@ -89,7 +98,7 @@
                         <span class="price">NT $1080</span>
                         <div calss="number">
                             <button class="min add">-</button>
-                            <input type="text" value="1" id="count" min="0" max="6">
+                            <input type="text" value="1" id="count" min="0" max="6" readonly>
                             <button class="max add">+</button>
                         </div>
                     </div>
@@ -106,7 +115,7 @@
                         </div>
                         <span id="sale"></span>
                     </div>
-                    <div class="text last">
+                    <div class="text last" id="cancelchange">
                         <span>總價<span id="total">NT $1080</span></span>
                     </div>
 
@@ -120,7 +129,7 @@
             <div class="part">
                 <span class="title">▌</span><span class="title1">取消與更改</span>
                 <p class="text">取消：<br>‧ 出發日前 7 日前通知取消，扣除手續費後，退回款項。<br>‧ 出發日前 6 日至前 4 日內通知取消，退回已付金額的 50%。<br>‧ 出發日前 3 日至當日內不接受取消，並不予退回款項。<br>‧ 如因天災等不可抗力因素，將主動聯繫延期或退款。
-                    <br><br>更改：<br>‧ 出發日前 6 日至前 4 日內可更改日期。但僅限一次。<br>‧ 出發日前 3 日至當日內不接受更改日期。<br>‧ 如更改後產生差價，費用多退少補。</p>
+                    <br><br>更改：<br>‧ 出發日前 6 日至前 4 日內可更改日期。但僅限一次。<br id="comment">‧ 出發日前 3 日至當日內不接受更改日期。<br>‧ 如更改後產生差價，費用多退少補。</p>
             </div>
             <div class="part">
                 <span class="title">▌</span><span class="title1">評價</span>
@@ -258,6 +267,8 @@
             let num = parseInt($('#count').val());
             //加
             $('.max').click(function(){
+                $('#coupon').val('');
+                total
                 if (num < 5) {
                     $('#count').val(num += 1);
                     $('.min').css('background-color','#ab8d3f');
@@ -291,6 +302,7 @@
                 return false;
             });
 
+            //驗證折扣碼
             let coupons = ['sale111','sale200','sale200','sale300','sale400','sale500','sale600'];
             let sub = $('#num').val();
             $('#checkCoupon').click(function(){
@@ -322,7 +334,27 @@
 				}
             });
             
+            //加入購物車
+            $('button.cart').click(function(){
+                event.preventDefault();
+                let failed = false;
+                    
+                $('.each').each(function(){
+                    if($(this).val() == '' || $(this).val() == null){
+                            failed = true;
+                        }
+                    });
+
+                    if(failed == true){
+                        alert('還有欄位沒填完喔');
+                    }else{
+                        alert('已加入購物車');
+                    }
+            })
+
+            //確認表單是否都有填
             $('button.buy').click(function(){
+                event.preventDefault();
                 let failed = false;
                     
                 $('.each').each(function(){

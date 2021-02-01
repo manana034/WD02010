@@ -20,18 +20,16 @@ a{
     text-decoration: none;
 }
 
-
 /* header */
 header {
   width: 100%;
     margin: 0 auto;
-    height: 80px;
+    /* height: 80px; */
     position: fixed;
     top: 0;
-    background-color:#aaa;
     align-items: center;
     text-align: center;
-    background: rgb(255, 255, 255,.7);
+    background: rgb(255, 255, 255, 0.8);
     z-index: 5;
   }
   
@@ -53,7 +51,6 @@ header {
     display: flex;
     align-items: center;
   }
-  
   ul.nav li {
     margin: 10px;
     width: 100px;
@@ -98,8 +95,7 @@ header {
     border-radius: 50px;
     z-index: -5;
   }
-  
-  
+
   div.icon {
     display: flex;
     align-items: center;
@@ -220,7 +216,7 @@ header {
   .box {
     display: none;
     margin: 0;
-    width: 30%;
+    width: 400px;
     position: fixed;
     bottom: 80px;
     right: 110px;
