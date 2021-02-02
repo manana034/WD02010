@@ -220,4 +220,7 @@ div.ks_text{
         display: flex;
         padding: 10px;
     }
+    img{
+        max-width: 100%;
+    }
 }

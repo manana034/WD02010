@@ -147,4 +147,7 @@ div.team_text{
             border-top-right-radius: 0px;
             border-top-left-radius: 120px;
         }
+        img{
+            max-width: 100%;
+        }
 }

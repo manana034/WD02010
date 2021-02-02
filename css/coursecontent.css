@@ -252,6 +252,7 @@ button.add {
     cursor: pointer;
     border-radius: 50%;
     outline: none; 
+    
   }
   
   button.min {
