@@ -426,38 +426,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
-
-    <script type="text/javascript">
+    <script>
         var swiper1 = new Swiper('.swiper1', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        parallax : true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            parallax : true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
         });
 
         var swiper2 = new Swiper('.swiper2', {
-        slidesPerView: 3.5,
-        spaceBetween: 50,
-        slidesPerGroup: 1,
-        loopedSlides: 4,
-        loop: false,
-        loopFillGroupWithBlank: false,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+            slidesPerView: 3.5,
+            spaceBetween: 50,
+            slidesPerGroup: 1,
+            loopedSlides: 4,
+            loop: false,
+            loopFillGroupWithBlank: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
 
 
         $(document).ready(function(){
+            //hamburger和messenger的切換
+
+
             //hamburger和nav的切換
             $('button.hamburger').on('click', function(){
                 $(this).toggleClass('is-active');
@@ -467,7 +469,7 @@
             });
             
             $('.type>ul>li>a').click(function(){
-                //type變色
+                //type變色swiper
                 event.preventDefault();
                 $('.type>ul>li>a').removeClass('on');
                 $(this).addClass('on');
@@ -477,13 +479,17 @@
                 $('.-on').css('display','block').parent().css('display','block');
                 if(this.id == 'low') {
                     $('.low').css('display', 'block');
+                    swiper2.update();
                 }else if(this.id == 'high') {
                     $('.high').css('display', 'block');
+                    swiper2.update();
                 }else if(this.id == 'pro') {
                     $('.pro').css('display', 'block');
+                    swiper2.update();
                 }else{
                     $('.swiper2').find('.swiper-slide').css('display','block');
                     $('.pagination>li').css('display','inline-block');
+                    swiper2.update();
                 }
             });
             //愛心
