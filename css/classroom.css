@@ -188,8 +188,36 @@ div.ks_text{
     border-bottom-right-radius: 150px;
 }
 
-@media(max-width:575px){
+@media(max-width:575px){  
+    div.banner{
+        height: 200px;
+    }
     section{
-        display: block;
-  }
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top:50px;
+        padding: 10px;
+    }
+    section.tc{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    div.img{
+        width: 100%;
+        display: flex;
+    }
+    div.text{
+        width: 100%;
+        border-radius: 20px;
+        position: relative;
+        top: -60px;
+        z-index: 4;
+    }
+
+    div.text >p{
+        display: flex;
+        padding: 10px;
+    }
 }

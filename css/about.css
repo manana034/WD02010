@@ -111,8 +111,40 @@ div.team_img{
 div.team_text{
     border-bottom-right-radius: 120px;
 }
-@media(max-width:575px){
-    section{
-        display: block;
-  }
+@media(max-width:575px){  
+        div.banner{
+            height: 200px;
+        }
+        section{
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top:50px;
+            padding: 10px;
+        }
+        section.idea{
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+        div.img{
+            width: 100%;
+            display: flex;
+        }
+        div.text{
+            width: 100%;
+        }
+    
+        div.text >p{
+            display: flex;
+            padding: 10px;
+        }
+        div.idea_text{
+            border-bottom-right-radius: 120px;
+            border-bottom-left-radius: 0px;
+        }
+        div.idea_img{
+            border-top-right-radius: 0px;
+            border-top-left-radius: 120px;
+        }
 }
