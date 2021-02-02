@@ -275,8 +275,8 @@ header {
   /* 對話框 */
   .messenger{
     position: fixed;
-    bottom: 80px;
-    right: 50px;
+    bottom: 60px;
+    right: 40px;
     z-index: 555;
   }
   

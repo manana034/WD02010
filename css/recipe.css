@@ -13,6 +13,17 @@ div.banner{
     align-items: center;
     justify-content: center;
 }
+@media(max-width:767px){
+    div.banner{
+        height: 400px;
+  }
+}
+
+@media(max-width:575px){
+    div.banner{
+        height: 230px;
+  }
+}
 
 div.banner h2.pagename{
     font-weight: bold;
@@ -77,7 +88,6 @@ div.right{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
 }
 
 div.pdct_card{
@@ -85,7 +95,7 @@ div.pdct_card{
     width: 250px;
     border-radius: 10px; 
     overflow: hidden;
-    margin: 30px 0px;
+    margin: 30px 20px;
     box-shadow: 5px 5px 10px gray;
     position: relative;
     background-color: #cdbb8c;
@@ -135,6 +145,46 @@ div.right div.pdct_card:hover p{
 div.right div.pdct_card:hover h4{
     background-color:  rgba(205,187,140,0.8);
     transition: all 0.6s ease 0s;
+}
+
+@media(max-width:991px){
+    div.pdct_card{
+        margin: 10px;
+    }
+}
+
+@media(max-width:575px){
+    div.left{
+        position: fixed;
+        width: 100%;
+        display: flex;
+        transform: translateY(130%);
+        transition: .6s;
+        background-color: rgba(104,76,136);
+        z-index: 55;
+        border-radius: 10px 10px 0px 0px;
+
+    }
+    div.left >div{
+        display: inline-block;
+        
+    }
+    div.left ul{
+        display: flex;
+        flex-wrap: wrap;
+        text-align: start;
+        /* flex-direction: column; */
+    }
+    div.left:hover{
+        transform: translateY(59%);
+        transition: .6s;
+    }
+    div.left ul li{
+        width: 125px;
+        color: white;
+    }
+
+
 }
 
 /* 頁數 */

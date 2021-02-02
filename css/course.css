@@ -12,6 +12,17 @@ div.banner{
     align-items: center;
     justify-content: center;
 }
+@media(max-width:767px){
+    div.banner{
+        height: 400px;
+  }
+}
+
+@media(max-width:575px){
+    div.banner{
+        height: 230px;
+  }
+}
 
 div.banner h2.pagename{
     font-weight: bold;
@@ -67,7 +78,7 @@ div.main{
     max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: auto;
 }
 div.course_card{
@@ -75,9 +86,21 @@ div.course_card{
     /* height: 300px; */
     border-radius: 10px; 
     overflow: hidden;
-    margin: 30px 0px;
+    margin: 30px 10px;
     box-shadow: 5px 5px 10px gray;  
     position: relative;
+}
+
+@media(max-width:767px){
+    div.course_card{
+        width: 40%;
+    }
+}
+
+@media(max-width:575px){
+    div.course_card{
+        width: 60%;
+    }
 }
 
 div.course_card span{
