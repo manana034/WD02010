@@ -49,8 +49,21 @@ div.banner{
     justify-content: center;
 }
 
+@media(max-width:767px){
+    div.banner{
+        height: 400px;
+  }
+}
+
+@media(max-width:575px){
+    div.banner{
+        height: 250px;
+  }
+}
+
 div.banner h2.pagename{
-    width: 40%;
+    width: 60%;
+    text-align: center;
     font-weight: bold;
     font-size: 28px;
     color: white;
@@ -61,6 +74,8 @@ div.banner h2.pagename{
     padding: 20px;
     font-family: "Arial";
 }
+
+
 
 /* 主內容 */
 div.main{

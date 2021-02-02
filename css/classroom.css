@@ -13,6 +13,18 @@ div.banner{
     justify-content: center;
 }
 
+@media(max-width:767px){
+    div.banner{
+        height: 400px;
+  }
+}
+
+@media(max-width:575px){
+    div.banner{
+        height: 230px;
+  }
+}
+
 div.banner h2.pagename{
     font-weight: bold;
     font-size: 30px;
@@ -88,7 +100,6 @@ section{
 div.img{
   /* border: 1px solid orange; */
   width: 500px;
-  height: 400px;
   overflow: hidden;
   box-shadow: 8px 8px 15px gray;
 }
@@ -103,7 +114,6 @@ div.text{
     /* border: 1px solid violet; */
     display: flex;
     width: 450px;
-    height: 250px;
     justify-content: center;
     /* align-items: center; */
     flex-direction: column;
@@ -176,4 +186,10 @@ div.ks_text{
     border-top-right-radius: 150px;
     border-top-left-radius: 150px;
     border-bottom-right-radius: 150px;
+}
+
+@media(max-width:575px){
+    section{
+        display: block;
+  }
 }
